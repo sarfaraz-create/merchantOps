@@ -618,6 +618,8 @@
         "monthly": [
           {
             "month": "2026-01-01",
+            "net_revenue": 12000,
+            "ad_spend": 0,
             "contribution": 7260
           }
         ],
@@ -645,17 +647,46 @@
         "watermark": [
           0,
           1
-        ]
+        ],
+        "story": {
+          "title": "1 January \u00b7 The customer pays \u20b9120",
+          "happened": "One customer buys two tees at \u20b950 each and one cap at \u20b930. A \u20b910 discount brings the bill to \u20b9120. They pay \u20b970 and \u20b950 in two separate payments.",
+          "testing": "Do several products and two payments still count as ONE \u20b9120 sale?",
+          "calculation": "\u20b9130 items \u2212 \u20b910 discount = \u20b9120 sales. \u20b9120 \u2212 \u20b940 item cost \u2212 \u20b95 delivery cost \u2212 \u20b92.40 payment fees = \u20b972.60 contribution.",
+          "reason": "Add the products once and add the payments separately. Matching every product row to every payment row must not multiply the sale or its costs.",
+          "action": "Both payments add up to the bill. No collection or refund follow-up is needed in this example.",
+          "expected": [
+            12000,
+            7260,
+            12000,
+            0,
+            0,
+            0
+          ],
+          "actual": [
+            12000,
+            7260,
+            12000,
+            0,
+            0,
+            0
+          ],
+          "passed": true
+        }
       },
       {
         "name": "Late partial line refund",
         "monthly": [
           {
             "month": "2026-01-01",
+            "net_revenue": 12000,
+            "ad_spend": 0,
             "contribution": 7260
           },
           {
             "month": "2026-02-01",
+            "net_revenue": -2000,
+            "ad_spend": 0,
             "contribution": -2000
           }
         ],
@@ -683,17 +714,46 @@
         "watermark": [
           1,
           2
-        ]
+        ],
+        "story": {
+          "title": "4 February \u00b7 You approve a \u20b920 refund",
+          "happened": "The customer receives a \u20b920 partial refund approval against the tees bought in January. No money has been returned yet.",
+          "testing": "Does the refund reduce the amount earned once, while showing that \u20b920 still needs to be returned?",
+          "calculation": "\u20b9120 sales \u2212 \u20b920 approved refund = \u20b9100 net sales. \u20b972.60 previous contribution \u2212 \u20b920 = \u20b952.60. \u20b920 approved \u2212 \u20b90 returned = \u20b920 still to return.",
+          "reason": "This project reduces sales when a refund is approved. February records the \u20b920 reduction; January stays at \u20b972.60 contribution. Across both months the total is \u20b952.60. The original item, delivery and payment costs remain expenses.",
+          "action": "Check whether the provider has processed the approved refund. An outstanding amount is a follow-up item, not proof of a failed payment.",
+          "expected": [
+            10000,
+            5260,
+            12000,
+            0,
+            2000,
+            0
+          ],
+          "actual": [
+            10000,
+            5260,
+            12000,
+            0,
+            2000,
+            0
+          ],
+          "passed": true
+        }
       },
       {
         "name": "Identical replay",
         "monthly": [
           {
             "month": "2026-01-01",
+            "net_revenue": 12000,
+            "ad_spend": 0,
             "contribution": 7260
           },
           {
             "month": "2026-02-01",
+            "net_revenue": -2000,
+            "ad_spend": 0,
             "contribution": -2000
           }
         ],
@@ -721,18 +781,47 @@
         "watermark": [
           2,
           2
-        ]
+        ],
+        "story": {
+          "title": "Import again \u00b7 The same \u20b920 refund appears twice",
+          "happened": "The exact same refund record is imported again, with the same refund ID and values. This is not another refund to the customer.",
+          "testing": "Can an export be imported twice without counting the refund twice?",
+          "calculation": "No new refund record is accepted. Net sales stay \u20b9100; contribution stays \u20b952.60; the amount still to return stays \u20b920.",
+          "reason": "The existing refund ID identifies an event already counted. A second genuine refund would need a different ID. Changing the values under an existing ID would be rejected.",
+          "action": "No merchant correction is needed for this exact duplicate. The importer reports zero new records.",
+          "expected": [
+            10000,
+            5260,
+            12000,
+            0,
+            2000,
+            0
+          ],
+          "actual": [
+            10000,
+            5260,
+            12000,
+            0,
+            2000,
+            0
+          ],
+          "passed": true
+        }
       },
       {
-        "name": "Refund cash returned + campaign cost",
+        "name": "Refund cash returned",
         "monthly": [
           {
             "month": "2026-01-01",
+            "net_revenue": 12000,
+            "ad_spend": 0,
             "contribution": 7260
           },
           {
             "month": "2026-02-01",
-            "contribution": -3000
+            "net_revenue": -2000,
+            "ad_spend": 0,
+            "contribution": -2000
           }
         ],
         "orders": 1,
@@ -754,22 +843,118 @@
         },
         "ingestion": {
           "batch_id": 3,
-          "inserted_rows": 2
+          "inserted_rows": 1
         },
         "watermark": [
           2,
           3
-        ]
+        ],
+        "story": {
+          "title": "5 February \u00b7 The provider returns \u20b920",
+          "happened": "A successful payment-provider record confirms that \u20b920 was returned to the customer. There is no extra refund fee in this synthetic example.",
+          "testing": "Does returning the money clear the outstanding refund WITHOUT reducing sales a second time?",
+          "calculation": "\u20b920 approved \u2212 \u20b920 returned = \u20b90 still to return. \u20b9120 received \u2212 \u20b920 returned = \u20b9100 net customer payments. Contribution stays \u20b952.60.",
+          "reason": "The reduction in sales was already recorded at approval. This event records the money moving. Deducting another \u20b920 from contribution would count one refund twice. Net customer payments are not your bank balance: fees, payouts and other expenses are separate.",
+          "action": "The approved refund now matches a successful return record. This example no longer needs refund-payment follow-up; it does not verify a bank settlement.",
+          "expected": [
+            10000,
+            5260,
+            12000,
+            2000,
+            0,
+            0
+          ],
+          "actual": [
+            10000,
+            5260,
+            12000,
+            2000,
+            0,
+            0
+          ],
+          "passed": true
+        }
+      },
+      {
+        "name": "Separate advertising cost",
+        "monthly": [
+          {
+            "month": "2026-01-01",
+            "net_revenue": 12000,
+            "ad_spend": 0,
+            "contribution": 7260
+          },
+          {
+            "month": "2026-02-01",
+            "net_revenue": -2000,
+            "ad_spend": 1000,
+            "contribution": -3000
+          }
+        ],
+        "orders": 1,
+        "line_items": 2,
+        "payments": 3,
+        "refunds": 1,
+        "quarantined_batches": 0,
+        "reconciliation": {
+          "order_id": "demo",
+          "channel": "Paid social",
+          "charged": 12000,
+          "refund_granted": 2000,
+          "captured": 12000,
+          "returned": 2000,
+          "collection_gap": 0,
+          "refund_payable": 0,
+          "cash_net": 10000,
+          "failed_attempts": 0
+        },
+        "ingestion": {
+          "batch_id": 4,
+          "inserted_rows": 1
+        },
+        "watermark": [
+          3,
+          4
+        ],
+        "story": {
+          "title": "5 February \u00b7 A separate \u20b910 advertising cost arrives",
+          "happened": "You import \u20b910 of advertising cost for this example\u2019s channel. This is a separate business expense, not part of the customer refund.",
+          "testing": "Does an extra cost reduce contribution without changing sales or the customer\u2019s payment balance?",
+          "calculation": "\u20b952.60 previous contribution \u2212 \u20b910 advertising = \u20b942.60. Net sales remain \u20b9100; payments received remain \u20b9120; returned money remains \u20b920.",
+          "reason": "Contribution subtracts the included operating costs from net sales. The cost is recorded at channel level; the tool does not claim that this ad caused the sale or allocate it to a product.",
+          "action": "Include the expense when reviewing channel performance. This example alone cannot tell you whether to cut the campaign.",
+          "expected": [
+            10000,
+            4260,
+            12000,
+            2000,
+            0,
+            1000
+          ],
+          "actual": [
+            10000,
+            4260,
+            12000,
+            2000,
+            0,
+            1000
+          ],
+          "passed": true
+        }
       },
       {
         "name": "Invalid line reference quarantined",
         "monthly": [
           {
             "month": "2026-01-01",
+            "net_revenue": 12000,
+            "ad_spend": 0,
             "contribution": 7260
           },
           {
             "month": "2026-02-01",
+            "net_revenue": -2000,
+            "ad_spend": 1000,
             "contribution": -3000
           }
         ],
@@ -794,11 +979,36 @@
           "rejected": "Orphan refund"
         },
         "watermark": [
-          3,
-          3
+          4,
+          4
         ],
         "rejection": {
           "reason": "Orphan refund"
+        },
+        "story": {
+          "title": "6 February \u00b7 A \u20b91 refund refers to an unknown item",
+          "happened": "An incoming refund record points to an item that is not in the imported orders. The example deliberately supplies this invalid record.",
+          "testing": "Will an unmatched refund be stopped instead of silently changing the report?",
+          "calculation": "The whole incoming batch is rejected. \u20b90 is added to refunds. Net sales stay \u20b9100 and contribution stays \u20b942.60. One rejected batch is saved for review.",
+          "reason": "Without an original item, the tool cannot validate the refund. The rejected input is kept separately for investigation (called quarantine in the technical details). It has no effect on the accepted financial totals.",
+          "action": "Find the missing order/item or fix the source mapping, then resubmit. A rejection does not prove fraud and does not establish that the refund is invalid in the real store.",
+          "expected": [
+            10000,
+            4260,
+            12000,
+            2000,
+            0,
+            1000
+          ],
+          "actual": [
+            10000,
+            4260,
+            12000,
+            2000,
+            0,
+            1000
+          ],
+          "passed": true
         }
       }
     ]
@@ -811,140 +1021,140 @@
       "payments": 3569,
       "spend": 543
     },
-    "build_seconds": 18.462,
+    "build_seconds": 21.835,
     "python": "3.13.2",
     "source_sha256": "7753c3737584ae30f28547664c12657bb3a293cba5b6e42682992644c1752324",
-    "generated_at_utc": "2026-10-22T22:41:43.470513+00:00",
+    "generated_at_utc": "2026-10-22T22:55:28.426838+00:00",
     "dbt": {
       "lower_batch": 0,
       "upper_batch": 1,
       "full_refresh": true,
-      "seconds": 2.4932564580230974,
+      "seconds": 2.5302788340486586,
       "results": [
         {
           "node": "model.merchantops.line_economics",
           "status": "success",
-          "seconds": 0.05288577079772949,
+          "seconds": 0.05780315399169922,
           "rows_affected": null
         },
         {
           "node": "model.merchantops.retention",
           "status": "success",
-          "seconds": 0.02975916862487793,
+          "seconds": 0.032935142517089844,
           "rows_affected": null
         },
         {
           "node": "test.merchantops.not_null_line_economics_line_id.54f10bd508",
           "status": "pass",
-          "seconds": 0.024067163467407227,
+          "seconds": 0.025321006774902344,
           "rows_affected": null
         },
         {
           "node": "test.merchantops.unique_line_economics_line_id.9bf90a6ef8",
           "status": "pass",
-          "seconds": 0.01311802864074707,
+          "seconds": 0.014336109161376953,
           "rows_affected": null
         },
         {
           "node": "test.merchantops.not_null_retention_cohort.cb4853a2cd",
           "status": "pass",
-          "seconds": 0.012330055236816406,
+          "seconds": 0.012830972671508789,
           "rows_affected": null
         },
         {
           "node": "test.merchantops.retention_bounds",
           "status": "pass",
-          "seconds": 0.011382102966308594,
+          "seconds": 0.01212620735168457,
           "rows_affected": null
         },
         {
           "node": "test.merchantops.unique_retention_cohort.4bd059e26f",
           "status": "pass",
-          "seconds": 0.011558055877685547,
+          "seconds": 0.012456893920898438,
           "rows_affected": null
         },
         {
           "node": "model.merchantops.order_economics",
           "status": "success",
-          "seconds": 0.01775813102722168,
+          "seconds": 0.018862009048461914,
           "rows_affected": null
         },
         {
           "node": "model.merchantops.sku_returns",
           "status": "success",
-          "seconds": 0.01586604118347168,
+          "seconds": 0.01922774314880371,
           "rows_affected": null
         },
         {
           "node": "test.merchantops.not_null_order_economics_order_id.a6992ff4d5",
           "status": "pass",
-          "seconds": 0.013502836227416992,
+          "seconds": 0.014744997024536133,
           "rows_affected": null
         },
         {
           "node": "test.merchantops.unique_order_economics_order_id.b277254880",
           "status": "pass",
-          "seconds": 0.011596918106079102,
+          "seconds": 0.012254953384399414,
           "rows_affected": null
         },
         {
           "node": "model.merchantops.monthly",
           "status": "success",
-          "seconds": 0.018382787704467773,
+          "seconds": 0.01901412010192871,
           "rows_affected": null
         },
         {
           "node": "model.merchantops.payment_reconciliation",
           "status": "success",
-          "seconds": 0.01697397232055664,
+          "seconds": 0.015942096710205078,
           "rows_affected": null
         },
         {
           "node": "test.merchantops.not_null_monthly_channel.2637434402",
           "status": "pass",
-          "seconds": 0.012603044509887695,
+          "seconds": 0.011522054672241211,
           "rows_affected": null
         },
         {
           "node": "test.merchantops.not_null_monthly_month.552cd99e34",
           "status": "pass",
-          "seconds": 0.013803958892822266,
+          "seconds": 0.011287927627563477,
           "rows_affected": null
         },
         {
           "node": "test.merchantops.reconcile",
           "status": "pass",
-          "seconds": 0.012688159942626953,
+          "seconds": 0.011816978454589844,
           "rows_affected": null
         },
         {
           "node": "test.merchantops.not_null_payment_reconciliation_order_id.d881e9e3aa",
           "status": "pass",
-          "seconds": 0.014160871505737305,
+          "seconds": 0.011773824691772461,
           "rows_affected": null
         },
         {
           "node": "test.merchantops.payment_balance",
           "status": "pass",
-          "seconds": 0.012293100357055664,
+          "seconds": 0.010928869247436523,
           "rows_affected": null
         },
         {
           "node": "test.merchantops.unique_payment_reconciliation_order_id.5a19427155",
           "status": "pass",
-          "seconds": 0.012840986251831055,
+          "seconds": 0.012157201766967773,
           "rows_affected": null
         },
         {
           "node": "model.merchantops.channel_acquisition",
           "status": "success",
-          "seconds": 0.021584033966064453,
+          "seconds": 0.022258996963500977,
           "rows_affected": null
         },
         {
           "node": "test.merchantops.sku_reconcile",
           "status": "pass",
-          "seconds": 0.012862920761108398,
+          "seconds": 0.01312398910522461,
           "rows_affected": null
         }
       ]

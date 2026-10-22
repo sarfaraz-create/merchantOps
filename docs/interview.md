@@ -6,7 +6,7 @@
 1. Show the financial bridge and distinguish contribution from profit.
 2. Inspect a SKU. Explain why order shipping/fees/ads are not silently allocated to it.
 3. Show refund payable. A credit can reduce revenue before the provider returns cash.
-4. Step through the recorded two-item/split-payment fixture: contribution ₹72.60 → ₹52.60 on refund grant → unchanged on duplicate → ₹42.60 after ₹10 extra ads and a cash return. Cash return clears the payable, not revenue again.
+4. Step through the recorded two-item/split-payment fixture: contribution ₹72.60 → ₹52.60 on refund approval → unchanged on duplicate → unchanged when ₹20 is returned → ₹42.60 after ₹10 extra ads. Cash return clears the payable, not revenue again.
 5. Open tests/test_incremental.py. Explain why ingestion sequence catches an old event and why a failed dbt run cannot advance the watermark.
 
 ## Do these exercises before claiming independent proficiency
@@ -26,3 +26,5 @@ AI-assisted implementation. No real merchant/platform connector or realised busi
 - Explain why line IDs derived from order + SKU require unique SKUs and an unchanged line set.
 - Demonstrate replay and a rejected discounted order. Explain why the adapter refuses it even though the canonical schema has a discount field: trustworthy platform allocation still needs its own contract.
 - Distinguish synthetic contract tests from verification against an actual Shopify merchant export. No real-store compatibility result is claimed.
+
+For a candid hiring and merchant-readiness assessment, read [product-assessment.md](product-assessment.md). The next evidence gap is real operator validation, not dashboard breadth.

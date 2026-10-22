@@ -28,12 +28,20 @@ fetch('data.json').then(r=>{if(!r.ok)throw Error('Data unavailable');return r.js
 el('channel').addEventListener('change',()=>{if(data)render()});
 
 function renderReplay(){
- const r=data.replay.stages[replayIndex];
- el('replay').textContent=r.monthly.map(m=>`${m.month.slice(0,7)} ${preciseMoney(m.contribution)}`).join(' · ')+` · Total ${preciseMoney(r.monthly.reduce((s,m)=>s+m.contribution,0))}`;
- el('replay-status').textContent=`Recorded step ${replayIndex+1}/5: ${r.name}. Orders: ${r.orders}; line items: ${r.line_items}; payment events: ${r.payments}; refunds: ${r.refunds}; quarantined batches: ${r.quarantined_batches}. Cash captured ${preciseMoney(r.reconciliation.captured)}; refund payable ${preciseMoney(r.reconciliation.refund_payable)}. `+(r.rejection?`Rejected: ${r.rejection.reason}. `:'')+'Recorded database outputs; no browser-triggered server mutation.';
- el('refund').disabled=replayIndex===data.replay.stages.length-1;
+ const stages=data.replay.stages,r=stages[replayIndex],s=r.story;
+ const labels=['Sales after approved refunds','Contribution after included costs','Payments received from customer','Money returned to customer','Approved refund still to return','Advertising cost'];
+ const before=replayIndex?stages[replayIndex-1].story.actual:null;
+ const rows=labels.map((label,i)=>`<tr><th scope="row">${label}</th><td>${before?preciseMoney(before[i]):'—'}</td><td>${preciseMoney(s.expected[i])}</td><td>${preciseMoney(s.actual[i])}</td></tr>`).join('');
+ const months=r.monthly.map(m=>`${m.month.slice(0,7)}: ${preciseMoney(m.contribution)}`).join(' · ');
+ el('replay').innerHTML=`<p class="eyebrow">STEP ${replayIndex+1} OF ${stages.length}</p><h3>${escapeHTML(s.title)}</h3><p>${escapeHTML(s.happened)}</p><div class="walkthrough-grid"><div><h4>What we are testing</h4><p>${escapeHTML(s.testing)}</p><h4>How the numbers work</h4><p class="worked-sum">${escapeHTML(s.calculation)}</p></div><div><h4>Why this is the right result</h4><p>${escapeHTML(s.reason)}</p><h4>What you would do</h4><p>${escapeHTML(s.action)}</p></div></div><div class="table-scroll"><table><caption>Before this step, our expected result, and the actual database result</caption><thead><tr><th scope="col">Measure</th><th scope="col">Before</th><th scope="col">Expected now</th><th scope="col">Actual now</th></tr></thead><tbody>${rows}</tbody></table></div><p><strong>${s.passed?'Check passed: actual results match the expected amounts and record counts.':'Check failed: do not rely on this result.'}</strong></p><p class="muted">Contribution by reporting month: ${months}. These are contributions, not monthly bank balances.</p>`;
+ el('replay-status').textContent=replayIndex===stages.length-1?'Example complete. One approved refund reduced sales once; its payment cleared the amount owed; duplicate and unmatched records did not alter accepted totals.':`Showing step ${replayIndex+1} of ${stages.length}. Next: ${stages[replayIndex+1].story.title}.`;
+ el('replay-evidence').textContent=JSON.stringify({source:r.name,orders:r.orders,product_rows:r.line_items,payment_records:r.payments,approved_refund_records:r.refunds,rejected_batches_saved:r.quarantined_batches,import_result:r.ingestion,expected_paise:s.expected,actual_paise:s.actual,check_passed:s.passed},null,2);
+ el('refund').disabled=replayIndex===stages.length-1;
+ el('previous').disabled=replayIndex===0;
+ el('reset').disabled=replayIndex===0;
 }
 el('refund').addEventListener('click',()=>{if(data&&replayIndex<data.replay.stages.length-1){replayIndex++;renderReplay()}});
+el('previous').addEventListener('click',()=>{if(data&&replayIndex>0){replayIndex--;renderReplay()}});
 el('reset').addEventListener('click',()=>{replayIndex=0;renderReplay()});
 fetch('benchmark.json').then(r=>{if(!r.ok)throw Error('missing');return r.json()}).then(b=>{
  const summary=mode=>{const runs=b.runs.filter(r=>r.mode===mode);const t=runs.map(r=>r.wall_seconds).sort((a,b)=>a-b);return `${mode}: ${t[Math.floor(t.length/2)].toFixed(2)}s median wall time; ${Math.max(...runs.map(r=>r.peak_rss_mib)).toFixed(1)} MiB largest individual process peak RSS`};

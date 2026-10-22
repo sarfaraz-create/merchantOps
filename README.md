@@ -2,7 +2,7 @@
 
 **Explain why store contribution changed—and reconcile what was actually collected or refunded.**
 
-[Public demo](https://merchantops-sarfaraz-demo.calmcat128.chatgpt.site/) · [Integration contract](docs/integration.md) · [Metric decisions](docs/decisions.md) · [Tests](tests/) · [Measured benchmark](docs/benchmark.json)
+[Public demo](https://merchantops-sarfaraz-demo.calmcat128.chatgpt.site/) · [Integration contract](docs/integration.md) · [Metric decisions](docs/decisions.md) · [Tests](tests/) · [Merchant value assessment](docs/product-assessment.md) · [Measured benchmark](docs/benchmark.json)
 
 MerchantOps is a local batch analytics system for commerce operators. It separates orders, line items, refund grants and payment events, so multiple items or split payments cannot multiply sales. It reports contribution, SKU refund exposure, observed repeat purchase and cash collection/refund liabilities.
 
@@ -12,7 +12,7 @@ MerchantOps is a local batch analytics system for commerce operators. It separat
 1. Filter a channel and inspect the contribution bridge: gross sales, discounts, refunds, item costs, shipping, actual payment fees and ads.
 2. Open SKU returns. Merchandise contribution excludes shared order/channel costs; those are accounted for in the financial ledger.
 3. Inspect payment reconciliation. A refund grant reduces revenue; returning its cash clears a liability, without reducing revenue twice.
-4. Step through the recorded database trace. Duplicate replay leaves totals unchanged; an orphan refund is rejected and retained in quarantine.
+4. Follow “One refund. Counted once.” Each step explains what happened, the calculation, expected versus actual results, and the merchant’s next action. Refund payment and advertising are separate steps.
 5. Inspect the real dbt integration test: a historical refund/backdated spend updates old partitions and matches a full rebuild.
 
 ## Quickstart — Python 3.13, macOS or Linux

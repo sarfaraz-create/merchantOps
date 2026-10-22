@@ -2,6 +2,7 @@
 
 from .core import connect, ingest, records
 from .pipeline import transform
+from .refund_story import explain
 from pathlib import Path
 import tempfile
 
@@ -32,13 +33,16 @@ def replay_evidence():
             ),
             ("Identical replay", {"refunds": [["r1", "l1", "2026-02-04", 2000]]}),
             (
-                "Refund cash returned + campaign cost",
+                "Refund cash returned",
                 {
                     "payments": [
                         ["p3", "demo", "2026-02-05", "refund", "succeeded", 2000, 0]
                     ],
-                    "spend": [["ad", "2026-02-05", "Paid social", 1000]],
                 },
+            ),
+            (
+                "Separate advertising cost",
+                {"spend": [["ad", "2026-02-05", "Paid social", 1000]]},
             ),
             (
                 "Invalid line reference quarantined",
@@ -58,7 +62,8 @@ def replay_evidence():
             stage = {
                 "name": name,
                 "monthly": records(
-                    c, "select month,contribution from monthly order by month"
+                    c,
+                    "select month,net_revenue,ad_spend,contribution from monthly order by month",
                 ),
                 **{
                     table: c.execute(f"select count(*) from {table}").fetchone()[0]
@@ -73,6 +78,7 @@ def replay_evidence():
             }
             if "rejected" in receipt:
                 stage["rejection"] = {"reason": receipt["rejected"]}
+            stage["story"] = explain(stage, len(stages))
             stages.append(stage)
             c.close()
     return {
