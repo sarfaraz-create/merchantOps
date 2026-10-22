@@ -1,6 +1,6 @@
 # Canonical store integration — v3
 
-This importer works on the contract below. It does not fetch Shopify, WooCommerce, Stripe or other platform data. Build and contract-test a platform mapper before claiming that integration.
+This importer works on the contract below. It does not fetch Shopify, WooCommerce, Stripe or other platform data. For Shopify Orders and transaction-history CSV files, use the separately tested [restricted offline adapter](shopify.md); its supported profile is narrower than this canonical contract.
 
 ## Envelope and exact fields
 Use UTF-8 JSON: `{"schema_version":3,"tables":{"orders":[...],"line_items":[...]}}`. Tables can be omitted for later event batches. Each record is an object whose keys must match the relevant list exactly. Example files are executable inputs.

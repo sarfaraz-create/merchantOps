@@ -1,0 +1,46 @@
+{
+  "profile": 1,
+  "store": "synthetic-demo",
+  "timezone": "Asia/Kolkata",
+  "orders": {
+    "9001": {
+      "customer_id": "customer-1",
+      "channel": "Unattributed",
+      "shipping_cost": "5.00",
+      "unit_costs": {
+        "TEE": "15.00",
+        "BAG": "10.00"
+      }
+    }
+  },
+  "transactions": {
+    "e7a2fea6d0c44c0e5516dc77b0fd6dc4d497f9710f5fb74de3458438c098c6da": {
+      "transaction_id": "synthetic-tx-1",
+      "fee": "1.60",
+      "reference": {
+        "Amount": "80.00",
+        "Created At": "2026-01-31 20:01:00 +0000",
+        "Currency": "INR",
+        "Gateway": "synthetic-provider",
+        "Kind": "sale",
+        "Name": "#1001",
+        "Order": "9001",
+        "Status": "success"
+      }
+    },
+    "23659e0ce7f5e643eedbfbfc6c789829443a9a975d93ed25c1c4608dee188833": {
+      "transaction_id": "synthetic-tx-2",
+      "fee": "1.00",
+      "reference": {
+        "Amount": "50.00",
+        "Created At": "2026-01-31 20:02:00 +0000",
+        "Currency": "INR",
+        "Gateway": "synthetic-provider",
+        "Kind": "capture",
+        "Name": "#1001",
+        "Order": "9001",
+        "Status": "success"
+      }
+    }
+  }
+}

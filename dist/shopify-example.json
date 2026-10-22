@@ -1,0 +1,159 @@
+{
+  "provenance": "Synthetic Shopify-shaped CSV fixtures, not an export from a real merchant. No live connection.",
+  "source": {
+    "adapter": "shopify-csv-profile-1",
+    "store": "synthetic-demo",
+    "timezone": "Asia/Kolkata",
+    "orders": 1,
+    "line_items": 2,
+    "captures": 2,
+    "charged_paise": 13000,
+    "captured_paise": 13000,
+    "orders_sha256": "554fe07bd6a5628de88baeabb311e0311330c25f17d187a00a0c8fd7c2d37dc6",
+    "transactions_sha256": "b42e657b9251e49d4f8deed8b19916176d1b1f5eb7f0dd1e34a69f6ece6581c1",
+    "context_sha256": "5e6bf5946e1f5f122b7ee48b0826f203bc1ed4847f56e76f11fa7c2cdfdbcb3f",
+    "verification": "Structural reconciliation only; merchant source completeness and supplied costs/IDs are not independently verified."
+  },
+  "first_inserted_rows": 5,
+  "replay_inserted_rows": 0,
+  "summary": {
+    "provenance": "User-supplied canonical input; not independently verified",
+    "currency": "INR",
+    "unit": "paise",
+    "processed_batch": 1,
+    "retention_as_of": "2026-06-30",
+    "net_revenue": 13000,
+    "contribution": 8240,
+    "collection_gap": 0,
+    "refund_payable": 0,
+    "note": "Local report only. Tax/FX/corrections are unsupported. Do not publish store records without authorization."
+  },
+  "dbt_results": [
+    {
+      "node": "model.merchantops.line_economics",
+      "status": "success",
+      "seconds": 0.049672842025756836,
+      "rows_affected": null
+    },
+    {
+      "node": "model.merchantops.retention",
+      "status": "success",
+      "seconds": 0.027917146682739258,
+      "rows_affected": null
+    },
+    {
+      "node": "test.merchantops.not_null_line_economics_line_id.54f10bd508",
+      "status": "pass",
+      "seconds": 0.023893117904663086,
+      "rows_affected": null
+    },
+    {
+      "node": "test.merchantops.unique_line_economics_line_id.9bf90a6ef8",
+      "status": "pass",
+      "seconds": 0.012801170349121094,
+      "rows_affected": null
+    },
+    {
+      "node": "test.merchantops.not_null_retention_cohort.cb4853a2cd",
+      "status": "pass",
+      "seconds": 0.011404752731323242,
+      "rows_affected": null
+    },
+    {
+      "node": "test.merchantops.retention_bounds",
+      "status": "pass",
+      "seconds": 0.01089787483215332,
+      "rows_affected": null
+    },
+    {
+      "node": "test.merchantops.unique_retention_cohort.4bd059e26f",
+      "status": "pass",
+      "seconds": 0.011173009872436523,
+      "rows_affected": null
+    },
+    {
+      "node": "model.merchantops.order_economics",
+      "status": "success",
+      "seconds": 0.015180110931396484,
+      "rows_affected": null
+    },
+    {
+      "node": "model.merchantops.sku_returns",
+      "status": "success",
+      "seconds": 0.014714241027832031,
+      "rows_affected": null
+    },
+    {
+      "node": "test.merchantops.not_null_order_economics_order_id.a6992ff4d5",
+      "status": "pass",
+      "seconds": 0.013699054718017578,
+      "rows_affected": null
+    },
+    {
+      "node": "test.merchantops.unique_order_economics_order_id.b277254880",
+      "status": "pass",
+      "seconds": 0.01209115982055664,
+      "rows_affected": null
+    },
+    {
+      "node": "model.merchantops.monthly",
+      "status": "success",
+      "seconds": 0.018507003784179688,
+      "rows_affected": null
+    },
+    {
+      "node": "model.merchantops.payment_reconciliation",
+      "status": "success",
+      "seconds": 0.014739274978637695,
+      "rows_affected": null
+    },
+    {
+      "node": "test.merchantops.not_null_monthly_channel.2637434402",
+      "status": "pass",
+      "seconds": 0.011586189270019531,
+      "rows_affected": null
+    },
+    {
+      "node": "test.merchantops.not_null_monthly_month.552cd99e34",
+      "status": "pass",
+      "seconds": 0.011245965957641602,
+      "rows_affected": null
+    },
+    {
+      "node": "test.merchantops.reconcile",
+      "status": "pass",
+      "seconds": 0.01200103759765625,
+      "rows_affected": null
+    },
+    {
+      "node": "test.merchantops.not_null_payment_reconciliation_order_id.d881e9e3aa",
+      "status": "pass",
+      "seconds": 0.012444019317626953,
+      "rows_affected": null
+    },
+    {
+      "node": "test.merchantops.payment_balance",
+      "status": "pass",
+      "seconds": 0.011017799377441406,
+      "rows_affected": null
+    },
+    {
+      "node": "test.merchantops.unique_payment_reconciliation_order_id.5a19427155",
+      "status": "pass",
+      "seconds": 0.012747049331665039,
+      "rows_affected": null
+    },
+    {
+      "node": "model.merchantops.channel_acquisition",
+      "status": "success",
+      "seconds": 0.020553112030029297,
+      "rows_affected": null
+    },
+    {
+      "node": "test.merchantops.sku_reconcile",
+      "status": "pass",
+      "seconds": 0.012603044509887695,
+      "rows_affected": null
+    }
+  ]
+}

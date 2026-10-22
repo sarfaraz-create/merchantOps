@@ -8,7 +8,12 @@ from .publishing import decision_memo, export_memo
 
 
 def main():
+    from .shopify_evidence import example_evidence
+
     start = time.perf_counter()
+    Path("dist/shopify-example.json").write_text(
+        json.dumps(example_evidence(), indent=2, default=str)
+    )
     batch = synthetic()
     with tempfile.TemporaryDirectory() as directory:
         db = Path(directory) / "merchantops-v3.duckdb"

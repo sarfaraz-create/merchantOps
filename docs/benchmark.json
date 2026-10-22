@@ -1,5 +1,5 @@
 {
-  "recorded_at_utc": "2026-10-22T22:22:24.328924+00:00",
+  "recorded_at_utc": "2026-10-22T22:42:48.614173+00:00",
   "command": "python -m merchantops.benchmark --orders 100000 --repeats 3",
   "machine": {
     "os": "macOS-26.1-arm64-arm-64bit-Mach-O",
@@ -8,9 +8,9 @@
     "logical_cpus": 8,
     "duckdb_threads": 1
   },
-  "code_sha256": "af6db278976f4259dd1e575f3d170d81f90c403a22d88c110151281844331546",
+  "code_sha256": "fa8ac92493c8f4345fc4a37b7d4d8f726262801b3df56e9411bd1fb2251b2b58",
   "dependency_sha256": "bc42db27bb4f6ac480bd469c2c250094d54e319cb9296f16045b63624d1d4f49",
-  "git_base_commit": "b64abd7a17fa44f00c8e07665711394740620a72",
+  "git_base_commit": "9aa1c59eca01a56eff6f82bf9ee10de1bbed0173",
   "scope": "Actual dbt build including tests. Five incremental models use affected keys/partitions; retention and acquisition rebuild. Full mode: one build. Incremental mode: initial, delta and replay builds. Largest individual process peak RSS is NOT aggregate memory. Wall time includes generation, checks and hashing. No speedup claim.",
   "workload": "Seed 42 multi-item store replicated with disjoint IDs and truncated to N orders; includes split/failed payments and refund liabilities. Spend is replicated per block.",
   "outputs_equal": true,
@@ -29,7 +29,7 @@
       "phases": [
         {
           "phase": "full",
-          "ingest_seconds": 1.7205094580422156,
+          "ingest_seconds": 1.793203791952692,
           "ingestion": {
             "batch_id": 1,
             "inserted_rows": 396834
@@ -38,142 +38,142 @@
             "lower_batch": 0,
             "upper_batch": 1,
             "full_refresh": true,
-            "seconds": 2.8332778749754652,
+            "seconds": 3.000057332974393,
             "results": [
               {
                 "node": "model.merchantops.line_economics",
                 "status": "success",
-                "seconds": 0.17197012901306152,
+                "seconds": 0.17633891105651855,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.retention",
                 "status": "success",
-                "seconds": 0.040574073791503906,
+                "seconds": 0.04174184799194336,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_line_economics_line_id.54f10bd508",
                 "status": "pass",
-                "seconds": 0.026584148406982422,
+                "seconds": 0.02602982521057129,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_line_economics_line_id.9bf90a6ef8",
                 "status": "pass",
-                "seconds": 0.0189666748046875,
+                "seconds": 0.01991891860961914,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_retention_cohort.cb4853a2cd",
                 "status": "pass",
-                "seconds": 0.01272892951965332,
+                "seconds": 0.012994050979614258,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.retention_bounds",
                 "status": "pass",
-                "seconds": 0.011499166488647461,
+                "seconds": 0.01165628433227539,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_retention_cohort.4bd059e26f",
                 "status": "pass",
-                "seconds": 0.011337995529174805,
+                "seconds": 0.012385845184326172,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.order_economics",
                 "status": "success",
-                "seconds": 0.06519412994384766,
+                "seconds": 0.06597495079040527,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.sku_returns",
                 "status": "success",
-                "seconds": 0.0275571346282959,
+                "seconds": 0.03310203552246094,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_order_economics_order_id.a6992ff4d5",
                 "status": "pass",
-                "seconds": 0.014066934585571289,
+                "seconds": 0.015442132949829102,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_order_economics_order_id.b277254880",
                 "status": "pass",
-                "seconds": 0.015570878982543945,
+                "seconds": 0.018031835556030273,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.monthly",
                 "status": "success",
-                "seconds": 0.0330500602722168,
+                "seconds": 0.03513813018798828,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.payment_reconciliation",
                 "status": "success",
-                "seconds": 0.11470222473144531,
+                "seconds": 0.11995387077331543,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_monthly_channel.2637434402",
                 "status": "pass",
-                "seconds": 0.012843132019042969,
+                "seconds": 0.013147830963134766,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_monthly_month.552cd99e34",
                 "status": "pass",
-                "seconds": 0.01166391372680664,
+                "seconds": 0.012348175048828125,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.reconcile",
                 "status": "pass",
-                "seconds": 0.011899232864379883,
+                "seconds": 0.013236045837402344,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_payment_reconciliation_order_id.d881e9e3aa",
                 "status": "pass",
-                "seconds": 0.011977910995483398,
+                "seconds": 0.012269020080566406,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.payment_balance",
                 "status": "pass",
-                "seconds": 0.011303186416625977,
+                "seconds": 0.012708187103271484,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_payment_reconciliation_order_id.5a19427155",
                 "status": "pass",
-                "seconds": 0.016621828079223633,
+                "seconds": 0.017940044403076172,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.channel_acquisition",
                 "status": "success",
-                "seconds": 0.03799700736999512,
+                "seconds": 0.0409698486328125,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.sku_reconcile",
                 "status": "pass",
-                "seconds": 0.01611804962158203,
+                "seconds": 0.016833782196044922,
                 "rows_affected": null
               }
             ]
           }
         }
       ],
-      "wall_seconds": 5.5127698329743,
-      "worker_peak_rss_mib": 500.5625,
-      "largest_child_peak_rss_mib": 269.734375,
-      "peak_rss_mib": 500.5625,
+      "wall_seconds": 5.769167500024196,
+      "worker_peak_rss_mib": 494.3125,
+      "largest_child_peak_rss_mib": 262.59375,
+      "peak_rss_mib": 494.3125,
       "output_sha256": {
         "line_economics": "26a91bb8d7580c3746bd6e57041676006c0dab45aa25941982624fb33e2904c2",
         "order_economics": "85ea999d37b4b3857763f193a90a2db8e3bf61477cc24ba1b3cb687bd5d6eea3",
@@ -200,7 +200,7 @@
       "phases": [
         {
           "phase": "initial",
-          "ingest_seconds": 0.7427849159575999,
+          "ingest_seconds": 0.7485550410347059,
           "ingestion": {
             "batch_id": 1,
             "inserted_rows": 156066
@@ -209,426 +209,426 @@
             "lower_batch": 0,
             "upper_batch": 1,
             "full_refresh": false,
-            "seconds": 2.6118455409887247,
+            "seconds": 2.829326500010211,
             "results": [
               {
                 "node": "model.merchantops.line_economics",
                 "status": "success",
-                "seconds": 0.08159923553466797,
+                "seconds": 0.08404803276062012,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.retention",
                 "status": "success",
-                "seconds": 0.03386402130126953,
+                "seconds": 0.036926984786987305,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_line_economics_line_id.54f10bd508",
                 "status": "pass",
-                "seconds": 0.023823022842407227,
+                "seconds": 0.02641892433166504,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_line_economics_line_id.9bf90a6ef8",
                 "status": "pass",
-                "seconds": 0.015521049499511719,
+                "seconds": 0.017788171768188477,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_retention_cohort.cb4853a2cd",
                 "status": "pass",
-                "seconds": 0.012559890747070312,
+                "seconds": 0.013714790344238281,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.retention_bounds",
                 "status": "pass",
-                "seconds": 0.01170206069946289,
+                "seconds": 0.012727975845336914,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_retention_cohort.4bd059e26f",
                 "status": "pass",
-                "seconds": 0.011195898056030273,
+                "seconds": 0.013105154037475586,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.order_economics",
                 "status": "success",
-                "seconds": 0.035610198974609375,
+                "seconds": 0.03734612464904785,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.sku_returns",
                 "status": "success",
-                "seconds": 0.02108025550842285,
+                "seconds": 0.02393507957458496,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_order_economics_order_id.a6992ff4d5",
+                "status": "pass",
+                "seconds": 0.01815009117126465,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.unique_order_economics_order_id.b277254880",
+                "status": "pass",
+                "seconds": 0.01617717742919922,
+                "rows_affected": null
+              },
+              {
+                "node": "model.merchantops.monthly",
+                "status": "success",
+                "seconds": 0.02592611312866211,
+                "rows_affected": null
+              },
+              {
+                "node": "model.merchantops.payment_reconciliation",
+                "status": "success",
+                "seconds": 0.03197503089904785,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.not_null_monthly_channel.2637434402",
+                "status": "pass",
+                "seconds": 0.014876127243041992,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.not_null_monthly_month.552cd99e34",
+                "status": "pass",
+                "seconds": 0.013259172439575195,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.reconcile",
+                "status": "pass",
+                "seconds": 0.013998746871948242,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.not_null_payment_reconciliation_order_id.d881e9e3aa",
+                "status": "pass",
+                "seconds": 0.013085126876831055,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.payment_balance",
+                "status": "pass",
+                "seconds": 0.013679981231689453,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.unique_payment_reconciliation_order_id.5a19427155",
+                "status": "pass",
+                "seconds": 0.015540838241577148,
+                "rows_affected": null
+              },
+              {
+                "node": "model.merchantops.channel_acquisition",
+                "status": "success",
+                "seconds": 0.03016495704650879,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.sku_reconcile",
+                "status": "pass",
+                "seconds": 0.016364097595214844,
+                "rows_affected": null
+              }
+            ]
+          }
+        },
+        {
+          "phase": "delta",
+          "ingest_seconds": 1.2555679169599898,
+          "ingestion": {
+            "batch_id": 2,
+            "inserted_rows": 240768
+          },
+          "dbt": {
+            "lower_batch": 1,
+            "upper_batch": 2,
+            "full_refresh": false,
+            "seconds": 3.040493874985259,
+            "results": [
+              {
+                "node": "model.merchantops.line_economics",
+                "status": "success",
+                "seconds": 0.17747998237609863,
+                "rows_affected": null
+              },
+              {
+                "node": "model.merchantops.retention",
+                "status": "success",
+                "seconds": 0.0560908317565918,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.not_null_line_economics_line_id.54f10bd508",
+                "status": "pass",
+                "seconds": 0.02428913116455078,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.unique_line_economics_line_id.9bf90a6ef8",
+                "status": "pass",
+                "seconds": 0.01673293113708496,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.not_null_retention_cohort.cb4853a2cd",
+                "status": "pass",
+                "seconds": 0.01203775405883789,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.retention_bounds",
+                "status": "pass",
+                "seconds": 0.011130094528198242,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.unique_retention_cohort.4bd059e26f",
+                "status": "pass",
+                "seconds": 0.011636972427368164,
+                "rows_affected": null
+              },
+              {
+                "node": "model.merchantops.order_economics",
+                "status": "success",
+                "seconds": 0.09171891212463379,
+                "rows_affected": null
+              },
+              {
+                "node": "model.merchantops.sku_returns",
+                "status": "success",
+                "seconds": 0.05904889106750488,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.not_null_order_economics_order_id.a6992ff4d5",
+                "status": "pass",
+                "seconds": 0.01199197769165039,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.unique_order_economics_order_id.b277254880",
+                "status": "pass",
+                "seconds": 0.015880823135375977,
+                "rows_affected": null
+              },
+              {
+                "node": "model.merchantops.monthly",
+                "status": "success",
+                "seconds": 0.05931901931762695,
+                "rows_affected": null
+              },
+              {
+                "node": "model.merchantops.payment_reconciliation",
+                "status": "success",
+                "seconds": 0.21289396286010742,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.not_null_monthly_channel.2637434402",
+                "status": "pass",
+                "seconds": 0.012248039245605469,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.not_null_monthly_month.552cd99e34",
+                "status": "pass",
+                "seconds": 0.01298213005065918,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.reconcile",
+                "status": "pass",
+                "seconds": 0.011863946914672852,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.not_null_payment_reconciliation_order_id.d881e9e3aa",
+                "status": "pass",
+                "seconds": 0.011568784713745117,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.payment_balance",
+                "status": "pass",
+                "seconds": 0.011987924575805664,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.unique_payment_reconciliation_order_id.5a19427155",
+                "status": "pass",
+                "seconds": 0.01658320426940918,
+                "rows_affected": null
+              },
+              {
+                "node": "model.merchantops.channel_acquisition",
+                "status": "success",
+                "seconds": 0.04632282257080078,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.sku_reconcile",
+                "status": "pass",
+                "seconds": 0.017375946044921875,
+                "rows_affected": null
+              }
+            ]
+          }
+        },
+        {
+          "phase": "replay",
+          "ingest_seconds": 0.8846082080272026,
+          "ingestion": {
+            "batch_id": 2,
+            "inserted_rows": 0
+          },
+          "dbt": {
+            "lower_batch": 2,
+            "upper_batch": 2,
+            "full_refresh": false,
+            "seconds": 2.79964108299464,
+            "results": [
+              {
+                "node": "model.merchantops.line_economics",
+                "status": "success",
+                "seconds": 0.08574795722961426,
+                "rows_affected": null
+              },
+              {
+                "node": "model.merchantops.retention",
+                "status": "success",
+                "seconds": 0.05641889572143555,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.not_null_line_economics_line_id.54f10bd508",
+                "status": "pass",
+                "seconds": 0.023853063583374023,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.unique_line_economics_line_id.9bf90a6ef8",
+                "status": "pass",
+                "seconds": 0.017528057098388672,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.not_null_retention_cohort.cb4853a2cd",
+                "status": "pass",
+                "seconds": 0.014497041702270508,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.retention_bounds",
+                "status": "pass",
+                "seconds": 0.012986898422241211,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.unique_retention_cohort.4bd059e26f",
+                "status": "pass",
+                "seconds": 0.013247013092041016,
+                "rows_affected": null
+              },
+              {
+                "node": "model.merchantops.order_economics",
+                "status": "success",
+                "seconds": 0.057528018951416016,
+                "rows_affected": null
+              },
+              {
+                "node": "model.merchantops.sku_returns",
+                "status": "success",
+                "seconds": 0.05181121826171875,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.not_null_order_economics_order_id.a6992ff4d5",
+                "status": "pass",
+                "seconds": 0.015788793563842773,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.unique_order_economics_order_id.b277254880",
+                "status": "pass",
+                "seconds": 0.023509979248046875,
+                "rows_affected": null
+              },
+              {
+                "node": "model.merchantops.monthly",
+                "status": "success",
+                "seconds": 0.06218385696411133,
+                "rows_affected": null
+              },
+              {
+                "node": "model.merchantops.payment_reconciliation",
+                "status": "success",
+                "seconds": 0.059243202209472656,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.not_null_monthly_channel.2637434402",
+                "status": "pass",
+                "seconds": 0.014075040817260742,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.not_null_monthly_month.552cd99e34",
                 "status": "pass",
                 "seconds": 0.013612031936645508,
                 "rows_affected": null
               },
               {
-                "node": "test.merchantops.unique_order_economics_order_id.b277254880",
-                "status": "pass",
-                "seconds": 0.013024091720581055,
-                "rows_affected": null
-              },
-              {
-                "node": "model.merchantops.monthly",
-                "status": "success",
-                "seconds": 0.023717164993286133,
-                "rows_affected": null
-              },
-              {
-                "node": "model.merchantops.payment_reconciliation",
-                "status": "success",
-                "seconds": 0.02972888946533203,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.not_null_monthly_channel.2637434402",
-                "status": "pass",
-                "seconds": 0.012112855911254883,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.not_null_monthly_month.552cd99e34",
-                "status": "pass",
-                "seconds": 0.011392831802368164,
-                "rows_affected": null
-              },
-              {
                 "node": "test.merchantops.reconcile",
                 "status": "pass",
-                "seconds": 0.011720895767211914,
+                "seconds": 0.012738227844238281,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_payment_reconciliation_order_id.d881e9e3aa",
                 "status": "pass",
-                "seconds": 0.011322021484375,
+                "seconds": 0.012624263763427734,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.payment_balance",
                 "status": "pass",
-                "seconds": 0.011461019515991211,
+                "seconds": 0.012192964553833008,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_payment_reconciliation_order_id.5a19427155",
                 "status": "pass",
-                "seconds": 0.01359701156616211,
+                "seconds": 0.017412900924682617,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.channel_acquisition",
                 "status": "success",
-                "seconds": 0.02802586555480957,
+                "seconds": 0.04739212989807129,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.sku_reconcile",
                 "status": "pass",
-                "seconds": 0.015535116195678711,
-                "rows_affected": null
-              }
-            ]
-          }
-        },
-        {
-          "phase": "delta",
-          "ingest_seconds": 1.2527038330445066,
-          "ingestion": {
-            "batch_id": 2,
-            "inserted_rows": 240768
-          },
-          "dbt": {
-            "lower_batch": 1,
-            "upper_batch": 2,
-            "full_refresh": false,
-            "seconds": 3.035600707982667,
-            "results": [
-              {
-                "node": "model.merchantops.line_economics",
-                "status": "success",
-                "seconds": 0.17673516273498535,
-                "rows_affected": null
-              },
-              {
-                "node": "model.merchantops.retention",
-                "status": "success",
-                "seconds": 0.05566906929016113,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.not_null_line_economics_line_id.54f10bd508",
-                "status": "pass",
-                "seconds": 0.02417898178100586,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.unique_line_economics_line_id.9bf90a6ef8",
-                "status": "pass",
-                "seconds": 0.01702880859375,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.not_null_retention_cohort.cb4853a2cd",
-                "status": "pass",
-                "seconds": 0.011683940887451172,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.retention_bounds",
-                "status": "pass",
-                "seconds": 0.011049985885620117,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.unique_retention_cohort.4bd059e26f",
-                "status": "pass",
-                "seconds": 0.011219024658203125,
-                "rows_affected": null
-              },
-              {
-                "node": "model.merchantops.order_economics",
-                "status": "success",
-                "seconds": 0.09522795677185059,
-                "rows_affected": null
-              },
-              {
-                "node": "model.merchantops.sku_returns",
-                "status": "success",
-                "seconds": 0.05907917022705078,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.not_null_order_economics_order_id.a6992ff4d5",
-                "status": "pass",
-                "seconds": 0.011741876602172852,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.unique_order_economics_order_id.b277254880",
-                "status": "pass",
-                "seconds": 0.015930891036987305,
-                "rows_affected": null
-              },
-              {
-                "node": "model.merchantops.monthly",
-                "status": "success",
-                "seconds": 0.05960273742675781,
-                "rows_affected": null
-              },
-              {
-                "node": "model.merchantops.payment_reconciliation",
-                "status": "success",
-                "seconds": 0.21203136444091797,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.not_null_monthly_channel.2637434402",
-                "status": "pass",
-                "seconds": 0.012056112289428711,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.not_null_monthly_month.552cd99e34",
-                "status": "pass",
-                "seconds": 0.012853384017944336,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.reconcile",
-                "status": "pass",
-                "seconds": 0.012006998062133789,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.not_null_payment_reconciliation_order_id.d881e9e3aa",
-                "status": "pass",
-                "seconds": 0.012676239013671875,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.payment_balance",
-                "status": "pass",
-                "seconds": 0.011457204818725586,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.unique_payment_reconciliation_order_id.5a19427155",
-                "status": "pass",
-                "seconds": 0.016823768615722656,
-                "rows_affected": null
-              },
-              {
-                "node": "model.merchantops.channel_acquisition",
-                "status": "success",
-                "seconds": 0.04721999168395996,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.sku_reconcile",
-                "status": "pass",
-                "seconds": 0.017568111419677734,
-                "rows_affected": null
-              }
-            ]
-          }
-        },
-        {
-          "phase": "replay",
-          "ingest_seconds": 1.1147684999741614,
-          "ingestion": {
-            "batch_id": 2,
-            "inserted_rows": 0
-          },
-          "dbt": {
-            "lower_batch": 2,
-            "upper_batch": 2,
-            "full_refresh": false,
-            "seconds": 3.3313024580129422,
-            "results": [
-              {
-                "node": "model.merchantops.line_economics",
-                "status": "success",
-                "seconds": 0.09673810005187988,
-                "rows_affected": null
-              },
-              {
-                "node": "model.merchantops.retention",
-                "status": "success",
-                "seconds": 0.06094217300415039,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.not_null_line_economics_line_id.54f10bd508",
-                "status": "pass",
-                "seconds": 0.02721095085144043,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.unique_line_economics_line_id.9bf90a6ef8",
-                "status": "pass",
-                "seconds": 0.019689083099365234,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.not_null_retention_cohort.cb4853a2cd",
-                "status": "pass",
-                "seconds": 0.012368202209472656,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.retention_bounds",
-                "status": "pass",
-                "seconds": 0.013065099716186523,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.unique_retention_cohort.4bd059e26f",
-                "status": "pass",
-                "seconds": 0.012948274612426758,
-                "rows_affected": null
-              },
-              {
-                "node": "model.merchantops.order_economics",
-                "status": "success",
-                "seconds": 0.05330705642700195,
-                "rows_affected": null
-              },
-              {
-                "node": "model.merchantops.sku_returns",
-                "status": "success",
-                "seconds": 0.03406119346618652,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.not_null_order_economics_order_id.a6992ff4d5",
-                "status": "pass",
-                "seconds": 0.013128280639648438,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.unique_order_economics_order_id.b277254880",
-                "status": "pass",
-                "seconds": 0.018236160278320312,
-                "rows_affected": null
-              },
-              {
-                "node": "model.merchantops.monthly",
-                "status": "success",
-                "seconds": 0.04336404800415039,
-                "rows_affected": null
-              },
-              {
-                "node": "model.merchantops.payment_reconciliation",
-                "status": "success",
-                "seconds": 0.044415950775146484,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.not_null_monthly_channel.2637434402",
-                "status": "pass",
-                "seconds": 0.013437986373901367,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.not_null_monthly_month.552cd99e34",
-                "status": "pass",
-                "seconds": 0.014256000518798828,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.reconcile",
-                "status": "pass",
-                "seconds": 0.012633800506591797,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.not_null_payment_reconciliation_order_id.d881e9e3aa",
-                "status": "pass",
-                "seconds": 0.013297796249389648,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.payment_balance",
-                "status": "pass",
-                "seconds": 0.013948917388916016,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.unique_payment_reconciliation_order_id.5a19427155",
-                "status": "pass",
-                "seconds": 0.01774001121520996,
-                "rows_affected": null
-              },
-              {
-                "node": "model.merchantops.channel_acquisition",
-                "status": "success",
-                "seconds": 0.049761056900024414,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.sku_reconcile",
-                "status": "pass",
-                "seconds": 0.019570112228393555,
+                "seconds": 0.017182350158691406,
                 "rows_affected": null
               }
             ]
           }
         }
       ],
-      "wall_seconds": 14.581007417000365,
-      "worker_peak_rss_mib": 509.53125,
-      "largest_child_peak_rss_mib": 305.765625,
-      "peak_rss_mib": 509.53125,
+      "wall_seconds": 13.830580417008605,
+      "worker_peak_rss_mib": 522.984375,
+      "largest_child_peak_rss_mib": 301.0,
+      "peak_rss_mib": 522.984375,
       "output_sha256": {
         "line_economics": "26a91bb8d7580c3746bd6e57041676006c0dab45aa25941982624fb33e2904c2",
         "order_economics": "85ea999d37b4b3857763f193a90a2db8e3bf61477cc24ba1b3cb687bd5d6eea3",
@@ -655,7 +655,7 @@
       "phases": [
         {
           "phase": "full",
-          "ingest_seconds": 1.7593408329994418,
+          "ingest_seconds": 1.7340019579860382,
           "ingestion": {
             "batch_id": 1,
             "inserted_rows": 396834
@@ -664,142 +664,142 @@
             "lower_batch": 0,
             "upper_batch": 1,
             "full_refresh": true,
-            "seconds": 3.029533416032791,
+            "seconds": 2.847587416996248,
             "results": [
               {
                 "node": "model.merchantops.line_economics",
                 "status": "success",
-                "seconds": 0.17925286293029785,
+                "seconds": 0.16860413551330566,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.retention",
                 "status": "success",
-                "seconds": 0.044873952865600586,
+                "seconds": 0.04025411605834961,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_line_economics_line_id.54f10bd508",
                 "status": "pass",
-                "seconds": 0.026897907257080078,
+                "seconds": 0.02388620376586914,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_line_economics_line_id.9bf90a6ef8",
                 "status": "pass",
-                "seconds": 0.020956993103027344,
+                "seconds": 0.018905162811279297,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_retention_cohort.cb4853a2cd",
                 "status": "pass",
-                "seconds": 0.012789011001586914,
+                "seconds": 0.01182103157043457,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.retention_bounds",
                 "status": "pass",
-                "seconds": 0.012744903564453125,
+                "seconds": 0.011035919189453125,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_retention_cohort.4bd059e26f",
                 "status": "pass",
-                "seconds": 0.013070821762084961,
+                "seconds": 0.01102900505065918,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.order_economics",
                 "status": "success",
-                "seconds": 0.06770205497741699,
+                "seconds": 0.06795096397399902,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.sku_returns",
                 "status": "success",
-                "seconds": 0.028699874877929688,
+                "seconds": 0.028384923934936523,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_order_economics_order_id.a6992ff4d5",
                 "status": "pass",
-                "seconds": 0.014980077743530273,
+                "seconds": 0.013904809951782227,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_order_economics_order_id.b277254880",
                 "status": "pass",
-                "seconds": 0.01662302017211914,
+                "seconds": 0.01566171646118164,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.monthly",
                 "status": "success",
-                "seconds": 0.03716683387756348,
+                "seconds": 0.03291893005371094,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.payment_reconciliation",
                 "status": "success",
-                "seconds": 0.11787009239196777,
+                "seconds": 0.11449599266052246,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_monthly_channel.2637434402",
                 "status": "pass",
-                "seconds": 0.013354063034057617,
+                "seconds": 0.01229095458984375,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_monthly_month.552cd99e34",
                 "status": "pass",
-                "seconds": 0.012145042419433594,
+                "seconds": 0.01183319091796875,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.reconcile",
                 "status": "pass",
-                "seconds": 0.013064146041870117,
+                "seconds": 0.01215982437133789,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_payment_reconciliation_order_id.d881e9e3aa",
                 "status": "pass",
-                "seconds": 0.013542890548706055,
+                "seconds": 0.011742353439331055,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.payment_balance",
                 "status": "pass",
-                "seconds": 0.01410984992980957,
+                "seconds": 0.011290788650512695,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_payment_reconciliation_order_id.5a19427155",
                 "status": "pass",
-                "seconds": 0.018986940383911133,
+                "seconds": 0.017017841339111328,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.channel_acquisition",
                 "status": "success",
-                "seconds": 0.04001498222351074,
+                "seconds": 0.03824186325073242,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.sku_reconcile",
                 "status": "pass",
-                "seconds": 0.017619848251342773,
+                "seconds": 0.016883134841918945,
                 "rows_affected": null
               }
             ]
           }
         }
       ],
-      "wall_seconds": 5.767036417033523,
-      "worker_peak_rss_mib": 492.28125,
-      "largest_child_peak_rss_mib": 262.109375,
-      "peak_rss_mib": 492.28125,
+      "wall_seconds": 5.545236999983899,
+      "worker_peak_rss_mib": 497.03125,
+      "largest_child_peak_rss_mib": 279.59375,
+      "peak_rss_mib": 497.03125,
       "output_sha256": {
         "line_economics": "26a91bb8d7580c3746bd6e57041676006c0dab45aa25941982624fb33e2904c2",
         "order_economics": "85ea999d37b4b3857763f193a90a2db8e3bf61477cc24ba1b3cb687bd5d6eea3",
@@ -826,7 +826,7 @@
       "phases": [
         {
           "phase": "initial",
-          "ingest_seconds": 0.958159625006374,
+          "ingest_seconds": 0.7712635420029983,
           "ingestion": {
             "batch_id": 1,
             "inserted_rows": 156066
@@ -835,132 +835,132 @@
             "lower_batch": 0,
             "upper_batch": 1,
             "full_refresh": false,
-            "seconds": 2.8836758750258014,
+            "seconds": 2.757960249960888,
             "results": [
               {
                 "node": "model.merchantops.line_economics",
                 "status": "success",
-                "seconds": 0.09032392501831055,
+                "seconds": 0.08527278900146484,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.retention",
                 "status": "success",
-                "seconds": 0.040656328201293945,
+                "seconds": 0.03578901290893555,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_line_economics_line_id.54f10bd508",
                 "status": "pass",
-                "seconds": 0.028900861740112305,
+                "seconds": 0.024422883987426758,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_line_economics_line_id.9bf90a6ef8",
                 "status": "pass",
-                "seconds": 0.01685190200805664,
+                "seconds": 0.015342235565185547,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_retention_cohort.cb4853a2cd",
                 "status": "pass",
-                "seconds": 0.013859033584594727,
+                "seconds": 0.011953353881835938,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.retention_bounds",
                 "status": "pass",
-                "seconds": 0.012515068054199219,
+                "seconds": 0.011559009552001953,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_retention_cohort.4bd059e26f",
                 "status": "pass",
-                "seconds": 0.012380838394165039,
+                "seconds": 0.011359930038452148,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.order_economics",
                 "status": "success",
-                "seconds": 0.038594961166381836,
+                "seconds": 0.03478217124938965,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.sku_returns",
                 "status": "success",
-                "seconds": 0.022951841354370117,
+                "seconds": 0.020798921585083008,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_order_economics_order_id.a6992ff4d5",
                 "status": "pass",
-                "seconds": 0.014969825744628906,
+                "seconds": 0.013714075088500977,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_order_economics_order_id.b277254880",
                 "status": "pass",
-                "seconds": 0.014673233032226562,
+                "seconds": 0.01365208625793457,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.monthly",
                 "status": "success",
-                "seconds": 0.0255129337310791,
+                "seconds": 0.024323701858520508,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.payment_reconciliation",
                 "status": "success",
-                "seconds": 0.03244209289550781,
+                "seconds": 0.030312299728393555,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_monthly_channel.2637434402",
                 "status": "pass",
-                "seconds": 0.013416051864624023,
+                "seconds": 0.011924982070922852,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_monthly_month.552cd99e34",
                 "status": "pass",
-                "seconds": 0.012096881866455078,
+                "seconds": 0.011469125747680664,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.reconcile",
                 "status": "pass",
-                "seconds": 0.012505769729614258,
+                "seconds": 0.012196063995361328,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_payment_reconciliation_order_id.d881e9e3aa",
                 "status": "pass",
-                "seconds": 0.012630939483642578,
+                "seconds": 0.012125015258789062,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.payment_balance",
                 "status": "pass",
-                "seconds": 0.01266789436340332,
+                "seconds": 0.01115107536315918,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_payment_reconciliation_order_id.5a19427155",
                 "status": "pass",
-                "seconds": 0.014107942581176758,
+                "seconds": 0.013456106185913086,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.channel_acquisition",
                 "status": "success",
-                "seconds": 0.028885841369628906,
+                "seconds": 0.028187990188598633,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.sku_reconcile",
                 "status": "pass",
-                "seconds": 0.01671910285949707,
+                "seconds": 0.014676809310913086,
                 "rows_affected": null
               }
             ]
@@ -968,7 +968,7 @@
         },
         {
           "phase": "delta",
-          "ingest_seconds": 1.2755927499965765,
+          "ingest_seconds": 1.2517559580155648,
           "ingestion": {
             "batch_id": 2,
             "inserted_rows": 240768
@@ -977,132 +977,132 @@
             "lower_batch": 1,
             "upper_batch": 2,
             "full_refresh": false,
-            "seconds": 3.1073310829815455,
+            "seconds": 3.0557185420184396,
             "results": [
               {
                 "node": "model.merchantops.line_economics",
                 "status": "success",
-                "seconds": 0.1790618896484375,
+                "seconds": 0.17754602432250977,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.retention",
                 "status": "success",
-                "seconds": 0.05675220489501953,
+                "seconds": 0.05584907531738281,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_line_economics_line_id.54f10bd508",
                 "status": "pass",
-                "seconds": 0.02444005012512207,
+                "seconds": 0.02466607093811035,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_line_economics_line_id.9bf90a6ef8",
                 "status": "pass",
-                "seconds": 0.01689004898071289,
+                "seconds": 0.01717209815979004,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_retention_cohort.cb4853a2cd",
                 "status": "pass",
-                "seconds": 0.012659311294555664,
+                "seconds": 0.011883974075317383,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.retention_bounds",
                 "status": "pass",
-                "seconds": 0.011456966400146484,
+                "seconds": 0.010991811752319336,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_retention_cohort.4bd059e26f",
                 "status": "pass",
-                "seconds": 0.01143503189086914,
+                "seconds": 0.011268138885498047,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.order_economics",
                 "status": "success",
-                "seconds": 0.09516191482543945,
+                "seconds": 0.09342217445373535,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.sku_returns",
                 "status": "success",
-                "seconds": 0.06066584587097168,
+                "seconds": 0.05857992172241211,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_order_economics_order_id.a6992ff4d5",
-                "status": "pass",
-                "seconds": 0.012134313583374023,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.unique_order_economics_order_id.b277254880",
-                "status": "pass",
-                "seconds": 0.01607489585876465,
-                "rows_affected": null
-              },
-              {
-                "node": "model.merchantops.monthly",
-                "status": "success",
-                "seconds": 0.06067013740539551,
-                "rows_affected": null
-              },
-              {
-                "node": "model.merchantops.payment_reconciliation",
-                "status": "success",
-                "seconds": 0.21740317344665527,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.not_null_monthly_channel.2637434402",
-                "status": "pass",
-                "seconds": 0.01247096061706543,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.not_null_monthly_month.552cd99e34",
-                "status": "pass",
-                "seconds": 0.013297080993652344,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.reconcile",
-                "status": "pass",
-                "seconds": 0.012917041778564453,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.not_null_payment_reconciliation_order_id.d881e9e3aa",
-                "status": "pass",
-                "seconds": 0.012560129165649414,
-                "rows_affected": null
-              },
-              {
-                "node": "test.merchantops.payment_balance",
                 "status": "pass",
                 "seconds": 0.01178288459777832,
                 "rows_affected": null
               },
               {
+                "node": "test.merchantops.unique_order_economics_order_id.b277254880",
+                "status": "pass",
+                "seconds": 0.015877246856689453,
+                "rows_affected": null
+              },
+              {
+                "node": "model.merchantops.monthly",
+                "status": "success",
+                "seconds": 0.05970573425292969,
+                "rows_affected": null
+              },
+              {
+                "node": "model.merchantops.payment_reconciliation",
+                "status": "success",
+                "seconds": 0.21875619888305664,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.not_null_monthly_channel.2637434402",
+                "status": "pass",
+                "seconds": 0.013691186904907227,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.not_null_monthly_month.552cd99e34",
+                "status": "pass",
+                "seconds": 0.01425790786743164,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.reconcile",
+                "status": "pass",
+                "seconds": 0.012550115585327148,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.not_null_payment_reconciliation_order_id.d881e9e3aa",
+                "status": "pass",
+                "seconds": 0.012640953063964844,
+                "rows_affected": null
+              },
+              {
+                "node": "test.merchantops.payment_balance",
+                "status": "pass",
+                "seconds": 0.012537717819213867,
+                "rows_affected": null
+              },
+              {
                 "node": "test.merchantops.unique_payment_reconciliation_order_id.5a19427155",
                 "status": "pass",
-                "seconds": 0.01687788963317871,
+                "seconds": 0.01770806312561035,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.channel_acquisition",
                 "status": "success",
-                "seconds": 0.04739785194396973,
+                "seconds": 0.046742916107177734,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.sku_reconcile",
                 "status": "pass",
-                "seconds": 0.019011974334716797,
+                "seconds": 0.017559051513671875,
                 "rows_affected": null
               }
             ]
@@ -1110,7 +1110,7 @@
         },
         {
           "phase": "replay",
-          "ingest_seconds": 0.8895052910083905,
+          "ingest_seconds": 0.8733745840145275,
           "ingestion": {
             "batch_id": 2,
             "inserted_rows": 0
@@ -1119,142 +1119,142 @@
             "lower_batch": 2,
             "upper_batch": 2,
             "full_refresh": false,
-            "seconds": 3.0986272080335766,
+            "seconds": 2.7019636670011096,
             "results": [
               {
                 "node": "model.merchantops.line_economics",
                 "status": "success",
-                "seconds": 0.09691905975341797,
+                "seconds": 0.08712100982666016,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.retention",
                 "status": "success",
-                "seconds": 0.06439328193664551,
+                "seconds": 0.058156728744506836,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_line_economics_line_id.54f10bd508",
                 "status": "pass",
-                "seconds": 0.026411056518554688,
+                "seconds": 0.02459406852722168,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_line_economics_line_id.9bf90a6ef8",
                 "status": "pass",
-                "seconds": 0.020489931106567383,
+                "seconds": 0.017846107482910156,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_retention_cohort.cb4853a2cd",
                 "status": "pass",
-                "seconds": 0.014228105545043945,
+                "seconds": 0.011979103088378906,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.retention_bounds",
                 "status": "pass",
-                "seconds": 0.01358795166015625,
+                "seconds": 0.011011838912963867,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_retention_cohort.4bd059e26f",
                 "status": "pass",
-                "seconds": 0.013289928436279297,
+                "seconds": 0.011175870895385742,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.order_economics",
                 "status": "success",
-                "seconds": 0.051235198974609375,
+                "seconds": 0.04472494125366211,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.sku_returns",
                 "status": "success",
-                "seconds": 0.0415492057800293,
+                "seconds": 0.03176689147949219,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_order_economics_order_id.a6992ff4d5",
                 "status": "pass",
-                "seconds": 0.015167951583862305,
+                "seconds": 0.011675834655761719,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_order_economics_order_id.b277254880",
                 "status": "pass",
-                "seconds": 0.01885390281677246,
+                "seconds": 0.016499042510986328,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.monthly",
                 "status": "success",
-                "seconds": 0.04617428779602051,
+                "seconds": 0.03881120681762695,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.payment_reconciliation",
                 "status": "success",
-                "seconds": 0.046671152114868164,
+                "seconds": 0.038126230239868164,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_monthly_channel.2637434402",
                 "status": "pass",
-                "seconds": 0.013903141021728516,
+                "seconds": 0.011983871459960938,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_monthly_month.552cd99e34",
                 "status": "pass",
-                "seconds": 0.015262365341186523,
+                "seconds": 0.01328277587890625,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.reconcile",
                 "status": "pass",
-                "seconds": 0.014045953750610352,
+                "seconds": 0.012083768844604492,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_payment_reconciliation_order_id.d881e9e3aa",
                 "status": "pass",
-                "seconds": 0.01343393325805664,
+                "seconds": 0.01180887222290039,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.payment_balance",
                 "status": "pass",
-                "seconds": 0.01381993293762207,
+                "seconds": 0.011620044708251953,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_payment_reconciliation_order_id.5a19427155",
                 "status": "pass",
-                "seconds": 0.01908397674560547,
+                "seconds": 0.016636133193969727,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.channel_acquisition",
                 "status": "success",
-                "seconds": 0.0520319938659668,
+                "seconds": 0.047901153564453125,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.sku_reconcile",
                 "status": "pass",
-                "seconds": 0.01971721649169922,
+                "seconds": 0.01782083511352539,
                 "rows_affected": null
               }
             ]
           }
         }
       ],
-      "wall_seconds": 14.60390487499535,
-      "worker_peak_rss_mib": 564.3125,
-      "largest_child_peak_rss_mib": 299.296875,
-      "peak_rss_mib": 564.3125,
+      "wall_seconds": 13.686559916008264,
+      "worker_peak_rss_mib": 596.875,
+      "largest_child_peak_rss_mib": 304.734375,
+      "peak_rss_mib": 596.875,
       "output_sha256": {
         "line_economics": "26a91bb8d7580c3746bd6e57041676006c0dab45aa25941982624fb33e2904c2",
         "order_economics": "85ea999d37b4b3857763f193a90a2db8e3bf61477cc24ba1b3cb687bd5d6eea3",
@@ -1281,7 +1281,7 @@
       "phases": [
         {
           "phase": "full",
-          "ingest_seconds": 1.8677252500201575,
+          "ingest_seconds": 1.7844910830026492,
           "ingestion": {
             "batch_id": 1,
             "inserted_rows": 396834
@@ -1290,142 +1290,142 @@
             "lower_batch": 0,
             "upper_batch": 1,
             "full_refresh": true,
-            "seconds": 3.022983666975051,
+            "seconds": 2.851212458044756,
             "results": [
               {
                 "node": "model.merchantops.line_economics",
                 "status": "success",
-                "seconds": 0.17610788345336914,
+                "seconds": 0.1777348518371582,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.retention",
                 "status": "success",
-                "seconds": 0.044914960861206055,
+                "seconds": 0.04283595085144043,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_line_economics_line_id.54f10bd508",
                 "status": "pass",
-                "seconds": 0.026742935180664062,
+                "seconds": 0.025348901748657227,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_line_economics_line_id.9bf90a6ef8",
                 "status": "pass",
-                "seconds": 0.020224809646606445,
+                "seconds": 0.020132780075073242,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_retention_cohort.cb4853a2cd",
                 "status": "pass",
-                "seconds": 0.013715028762817383,
+                "seconds": 0.01165008544921875,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.retention_bounds",
                 "status": "pass",
-                "seconds": 0.01213383674621582,
+                "seconds": 0.012159109115600586,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_retention_cohort.4bd059e26f",
                 "status": "pass",
-                "seconds": 0.011504888534545898,
+                "seconds": 0.012354850769042969,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.order_economics",
                 "status": "success",
-                "seconds": 0.06552910804748535,
+                "seconds": 0.06446480751037598,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.sku_returns",
                 "status": "success",
-                "seconds": 0.028642892837524414,
+                "seconds": 0.028496980667114258,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_order_economics_order_id.a6992ff4d5",
                 "status": "pass",
-                "seconds": 0.015386819839477539,
+                "seconds": 0.013789892196655273,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_order_economics_order_id.b277254880",
                 "status": "pass",
-                "seconds": 0.016852378845214844,
+                "seconds": 0.015726089477539062,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.monthly",
                 "status": "success",
-                "seconds": 0.03473496437072754,
+                "seconds": 0.03270292282104492,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.payment_reconciliation",
                 "status": "success",
-                "seconds": 0.11404585838317871,
+                "seconds": 0.11145186424255371,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_monthly_channel.2637434402",
                 "status": "pass",
-                "seconds": 0.01251983642578125,
+                "seconds": 0.012695074081420898,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_monthly_month.552cd99e34",
                 "status": "pass",
-                "seconds": 0.012013912200927734,
+                "seconds": 0.011747121810913086,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.reconcile",
                 "status": "pass",
-                "seconds": 0.01237177848815918,
+                "seconds": 0.01291203498840332,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_payment_reconciliation_order_id.d881e9e3aa",
                 "status": "pass",
-                "seconds": 0.012407779693603516,
+                "seconds": 0.012198925018310547,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.payment_balance",
                 "status": "pass",
-                "seconds": 0.011630058288574219,
+                "seconds": 0.012478113174438477,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_payment_reconciliation_order_id.5a19427155",
                 "status": "pass",
-                "seconds": 0.01715683937072754,
+                "seconds": 0.01772594451904297,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.channel_acquisition",
                 "status": "success",
-                "seconds": 0.038429975509643555,
+                "seconds": 0.0376279354095459,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.sku_reconcile",
                 "status": "pass",
-                "seconds": 0.01626896858215332,
+                "seconds": 0.016337871551513672,
                 "rows_affected": null
               }
             ]
           }
         }
       ],
-      "wall_seconds": 5.907406082958914,
-      "worker_peak_rss_mib": 492.421875,
-      "largest_child_peak_rss_mib": 276.359375,
-      "peak_rss_mib": 492.421875,
+      "wall_seconds": 5.598916582996026,
+      "worker_peak_rss_mib": 495.078125,
+      "largest_child_peak_rss_mib": 264.75,
+      "peak_rss_mib": 495.078125,
       "output_sha256": {
         "line_economics": "26a91bb8d7580c3746bd6e57041676006c0dab45aa25941982624fb33e2904c2",
         "order_economics": "85ea999d37b4b3857763f193a90a2db8e3bf61477cc24ba1b3cb687bd5d6eea3",
@@ -1452,7 +1452,7 @@
       "phases": [
         {
           "phase": "initial",
-          "ingest_seconds": 0.7533476249664091,
+          "ingest_seconds": 0.7393424580222927,
           "ingestion": {
             "batch_id": 1,
             "inserted_rows": 156066
@@ -1461,132 +1461,132 @@
             "lower_batch": 0,
             "upper_batch": 1,
             "full_refresh": false,
-            "seconds": 2.9958869160036556,
+            "seconds": 2.6765733750071377,
             "results": [
               {
                 "node": "model.merchantops.line_economics",
                 "status": "success",
-                "seconds": 0.1006162166595459,
+                "seconds": 0.08443117141723633,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.retention",
                 "status": "success",
-                "seconds": 0.04099583625793457,
+                "seconds": 0.03482985496520996,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_line_economics_line_id.54f10bd508",
                 "status": "pass",
-                "seconds": 0.027762889862060547,
+                "seconds": 0.0248870849609375,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_line_economics_line_id.9bf90a6ef8",
                 "status": "pass",
-                "seconds": 0.022575855255126953,
+                "seconds": 0.016253232955932617,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_retention_cohort.cb4853a2cd",
                 "status": "pass",
-                "seconds": 0.013374090194702148,
+                "seconds": 0.012711048126220703,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.retention_bounds",
                 "status": "pass",
-                "seconds": 0.011925935745239258,
+                "seconds": 0.011234045028686523,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_retention_cohort.4bd059e26f",
                 "status": "pass",
-                "seconds": 0.012031078338623047,
+                "seconds": 0.011630058288574219,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.order_economics",
                 "status": "success",
-                "seconds": 0.04069805145263672,
+                "seconds": 0.03557229042053223,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.sku_returns",
                 "status": "success",
-                "seconds": 0.031442880630493164,
+                "seconds": 0.020802974700927734,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_order_economics_order_id.a6992ff4d5",
                 "status": "pass",
-                "seconds": 0.029932022094726562,
+                "seconds": 0.014121055603027344,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_order_economics_order_id.b277254880",
                 "status": "pass",
-                "seconds": 0.021624088287353516,
+                "seconds": 0.014359712600708008,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.monthly",
                 "status": "success",
-                "seconds": 0.032855987548828125,
+                "seconds": 0.02676081657409668,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.payment_reconciliation",
                 "status": "success",
-                "seconds": 0.03845787048339844,
+                "seconds": 0.031684160232543945,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_monthly_channel.2637434402",
                 "status": "pass",
-                "seconds": 0.014312982559204102,
+                "seconds": 0.01231694221496582,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_monthly_month.552cd99e34",
                 "status": "pass",
-                "seconds": 0.01342320442199707,
+                "seconds": 0.01205301284790039,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.reconcile",
                 "status": "pass",
-                "seconds": 0.016243934631347656,
+                "seconds": 0.012445926666259766,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_payment_reconciliation_order_id.d881e9e3aa",
                 "status": "pass",
-                "seconds": 0.013705968856811523,
+                "seconds": 0.011950254440307617,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.payment_balance",
                 "status": "pass",
-                "seconds": 0.012677907943725586,
+                "seconds": 0.011522054672241211,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_payment_reconciliation_order_id.5a19427155",
                 "status": "pass",
-                "seconds": 0.015197038650512695,
+                "seconds": 0.01335597038269043,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.channel_acquisition",
                 "status": "success",
-                "seconds": 0.0354619026184082,
+                "seconds": 0.028007984161376953,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.sku_reconcile",
                 "status": "pass",
-                "seconds": 0.01571512222290039,
+                "seconds": 0.014751911163330078,
                 "rows_affected": null
               }
             ]
@@ -1594,7 +1594,7 @@
         },
         {
           "phase": "delta",
-          "ingest_seconds": 1.3504435410141014,
+          "ingest_seconds": 1.2446650839992799,
           "ingestion": {
             "batch_id": 2,
             "inserted_rows": 240768
@@ -1603,132 +1603,132 @@
             "lower_batch": 1,
             "upper_batch": 2,
             "full_refresh": false,
-            "seconds": 3.291545332991518,
+            "seconds": 3.092680416011717,
             "results": [
               {
                 "node": "model.merchantops.line_economics",
                 "status": "success",
-                "seconds": 0.1861250400543213,
+                "seconds": 0.17721796035766602,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.retention",
                 "status": "success",
-                "seconds": 0.06062602996826172,
+                "seconds": 0.058695077896118164,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_line_economics_line_id.54f10bd508",
                 "status": "pass",
-                "seconds": 0.025908946990966797,
+                "seconds": 0.026729345321655273,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_line_economics_line_id.9bf90a6ef8",
                 "status": "pass",
-                "seconds": 0.017560243606567383,
+                "seconds": 0.017746925354003906,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_retention_cohort.cb4853a2cd",
                 "status": "pass",
-                "seconds": 0.0138092041015625,
+                "seconds": 0.012916803359985352,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.retention_bounds",
                 "status": "pass",
-                "seconds": 0.014914751052856445,
+                "seconds": 0.01180887222290039,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_retention_cohort.4bd059e26f",
                 "status": "pass",
-                "seconds": 0.013157844543457031,
+                "seconds": 0.01199793815612793,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.order_economics",
                 "status": "success",
-                "seconds": 0.0979921817779541,
+                "seconds": 0.10422921180725098,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.sku_returns",
                 "status": "success",
-                "seconds": 0.0633082389831543,
+                "seconds": 0.0642390251159668,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_order_economics_order_id.a6992ff4d5",
                 "status": "pass",
-                "seconds": 0.013007879257202148,
+                "seconds": 0.013082742691040039,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_order_economics_order_id.b277254880",
                 "status": "pass",
-                "seconds": 0.016870975494384766,
+                "seconds": 0.017328977584838867,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.monthly",
                 "status": "success",
-                "seconds": 0.0634000301361084,
+                "seconds": 0.0604710578918457,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.payment_reconciliation",
                 "status": "success",
-                "seconds": 0.2364790439605713,
+                "seconds": 0.21528863906860352,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_monthly_channel.2637434402",
                 "status": "pass",
-                "seconds": 0.014655113220214844,
+                "seconds": 0.013043880462646484,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_monthly_month.552cd99e34",
                 "status": "pass",
-                "seconds": 0.016833066940307617,
+                "seconds": 0.01393890380859375,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.reconcile",
                 "status": "pass",
-                "seconds": 0.012871980667114258,
+                "seconds": 0.013222932815551758,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_payment_reconciliation_order_id.d881e9e3aa",
                 "status": "pass",
-                "seconds": 0.01454305648803711,
+                "seconds": 0.01294088363647461,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.payment_balance",
                 "status": "pass",
-                "seconds": 0.013036012649536133,
+                "seconds": 0.012278079986572266,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_payment_reconciliation_order_id.5a19427155",
                 "status": "pass",
-                "seconds": 0.017750024795532227,
+                "seconds": 0.01822686195373535,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.channel_acquisition",
                 "status": "success",
-                "seconds": 0.059658050537109375,
+                "seconds": 0.04862093925476074,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.sku_reconcile",
                 "status": "pass",
-                "seconds": 0.018372774124145508,
+                "seconds": 0.018693923950195312,
                 "rows_affected": null
               }
             ]
@@ -1736,7 +1736,7 @@
         },
         {
           "phase": "replay",
-          "ingest_seconds": 0.9242022919934243,
+          "ingest_seconds": 0.8661458750138991,
           "ingestion": {
             "batch_id": 2,
             "inserted_rows": 0
@@ -1745,142 +1745,142 @@
             "lower_batch": 2,
             "upper_batch": 2,
             "full_refresh": false,
-            "seconds": 3.037618583010044,
+            "seconds": 2.751557707961183,
             "results": [
               {
                 "node": "model.merchantops.line_economics",
                 "status": "success",
-                "seconds": 0.09622621536254883,
+                "seconds": 0.0895988941192627,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.retention",
                 "status": "success",
-                "seconds": 0.06270408630371094,
+                "seconds": 0.06295585632324219,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_line_economics_line_id.54f10bd508",
                 "status": "pass",
-                "seconds": 0.026647090911865234,
+                "seconds": 0.02431488037109375,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_line_economics_line_id.9bf90a6ef8",
                 "status": "pass",
-                "seconds": 0.019610881805419922,
+                "seconds": 0.01761603355407715,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_retention_cohort.cb4853a2cd",
                 "status": "pass",
-                "seconds": 0.013736963272094727,
+                "seconds": 0.01164698600769043,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.retention_bounds",
                 "status": "pass",
-                "seconds": 0.013103008270263672,
+                "seconds": 0.01093912124633789,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_retention_cohort.4bd059e26f",
                 "status": "pass",
-                "seconds": 0.012812137603759766,
+                "seconds": 0.011112213134765625,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.order_economics",
                 "status": "success",
-                "seconds": 0.04968595504760742,
+                "seconds": 0.04416322708129883,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.sku_returns",
                 "status": "success",
-                "seconds": 0.03380870819091797,
+                "seconds": 0.03659701347351074,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_order_economics_order_id.a6992ff4d5",
                 "status": "pass",
-                "seconds": 0.01295614242553711,
+                "seconds": 0.011662721633911133,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_order_economics_order_id.b277254880",
                 "status": "pass",
-                "seconds": 0.018064022064208984,
+                "seconds": 0.016368865966796875,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.monthly",
                 "status": "success",
-                "seconds": 0.04209184646606445,
+                "seconds": 0.03897595405578613,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.payment_reconciliation",
                 "status": "success",
-                "seconds": 0.0571441650390625,
+                "seconds": 0.039971113204956055,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_monthly_channel.2637434402",
                 "status": "pass",
-                "seconds": 0.01446223258972168,
+                "seconds": 0.012345314025878906,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_monthly_month.552cd99e34",
                 "status": "pass",
-                "seconds": 0.014924764633178711,
+                "seconds": 0.013458013534545898,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.reconcile",
                 "status": "pass",
-                "seconds": 0.018212080001831055,
+                "seconds": 0.012355804443359375,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.not_null_payment_reconciliation_order_id.d881e9e3aa",
                 "status": "pass",
-                "seconds": 0.015321731567382812,
+                "seconds": 0.011876821517944336,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.payment_balance",
                 "status": "pass",
-                "seconds": 0.013337135314941406,
+                "seconds": 0.011615991592407227,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.unique_payment_reconciliation_order_id.5a19427155",
                 "status": "pass",
-                "seconds": 0.027055025100708008,
+                "seconds": 0.017308950424194336,
                 "rows_affected": null
               },
               {
                 "node": "model.merchantops.channel_acquisition",
                 "status": "success",
-                "seconds": 0.0551302433013916,
+                "seconds": 0.04798412322998047,
                 "rows_affected": null
               },
               {
                 "node": "test.merchantops.sku_reconcile",
                 "status": "pass",
-                "seconds": 0.018023014068603516,
+                "seconds": 0.017182111740112305,
                 "rows_affected": null
               }
             ]
           }
         }
       ],
-      "wall_seconds": 14.682919458020478,
-      "worker_peak_rss_mib": 499.625,
-      "largest_child_peak_rss_mib": 292.65625,
-      "peak_rss_mib": 499.625,
+      "wall_seconds": 13.66813608398661,
+      "worker_peak_rss_mib": 575.46875,
+      "largest_child_peak_rss_mib": 298.75,
+      "peak_rss_mib": 575.46875,
       "output_sha256": {
         "line_economics": "26a91bb8d7580c3746bd6e57041676006c0dab45aa25941982624fb33e2904c2",
         "order_economics": "85ea999d37b4b3857763f193a90a2db8e3bf61477cc24ba1b3cb687bd5d6eea3",

@@ -1,0 +1,3 @@
+Cancelled at,Created at,Currency,Discount Amount,Financial Status,Id,Lineitem discount,Lineitem name,Lineitem price,Lineitem quantity,Lineitem sku,Name,Refunded Amount,Shipping,Subtotal,Taxes,Total
+,2026-01-31 20:00:00 +0000,INR,0.00,paid,9001,0.00,Synthetic tee,50.00,2,TEE,#1001,0.00,0.00,130.00,0.00,130.00
+,,,,,,0.00,Synthetic bag,30.00,1,BAG,#1001,,,,,

@@ -9,3 +9,9 @@ Version 3 verifies normalized source grains and actual incremental dbt, not a si
 - Public browser shows a static synthetic snapshot; replay controls display recorded DuckDB/dbt output. They do not mutate a hosted warehouse.
 
 The previous v2 CSV detection bug remains covered by a quoted/multiline regression. Version 3 rejects the legacy database schema and creates a distinct demo database path. GitHub run status should be read from the repository's Actions page; this document does not imply a run passed merely because its workflow exists.
+
+## Shopify CSV profile 1
+
+Synthetic fixtures use documented Orders and transaction-history headers. Tests cover complete multi-line grouping, split captures, source reconciliation, exact decimals, timezone month rollover, unknown costs/IDs, CSV quoting/BOM, PII exclusion, replay, changed snapshot rejection and unsupported lifecycle events. The CLI test runs actual dbt, exports a hand-calculated ₹82.40 contribution report, and compares all seven models after full refresh. The public build separately executes this example and records its receipt in `dist/shopify-example.json`.
+
+This evidence does not verify a real export, live Shopify connection, all export variants or the truth of externally supplied costs/customer/payment IDs. The scale benchmark continues to exercise synthetic canonical records, not CSV parsing at scale.

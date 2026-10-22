@@ -19,3 +19,10 @@
 
 ## Limits to state plainly
 AI-assisted implementation. No real merchant/platform connector or realised business results. The benchmark includes more builds in the incremental scenario, so its total runtime is not a speed comparison. Local single-writer operation; no multi-user hosting or tax/FX/correction support.
+
+## Defend the Shopify adapter
+- Explain why native CSV payment references are not proof of successful cash capture.
+- Walk through the required cost/identity metadata and why explicit zero is different from unknown.
+- Explain why line IDs derived from order + SKU require unique SKUs and an unchanged line set.
+- Demonstrate replay and a rejected discounted order. Explain why the adapter refuses it even though the canonical schema has a discount field: trustworthy platform allocation still needs its own contract.
+- Distinguish synthetic contract tests from verification against an actual Shopify merchant export. No real-store compatibility result is claimed.

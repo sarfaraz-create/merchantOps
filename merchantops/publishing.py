@@ -81,6 +81,7 @@ def package_source():
             "dist/style.css",
             "dist/guide.html",
             "dist/integration.html",
+            "dist/shopify-example.json",
             "dist/data.json",
             "dist/benchmark.json",
             "dist/gap-review.md",
