@@ -1,0 +1,55 @@
+{
+  "schema_version": 3,
+  "tables": {
+    "orders": [
+      {
+        "order_id": "demo",
+        "customer_id": "customer",
+        "ordered_at": "2026-01-01",
+        "channel": "Paid social",
+        "shipping": 500,
+        "currency": "INR"
+      }
+    ],
+    "line_items": [
+      {
+        "line_id": "l1",
+        "order_id": "demo",
+        "product": "Tee",
+        "quantity": 2,
+        "unit_price": 5000,
+        "discount": 1000,
+        "unit_cost": 1500
+      },
+      {
+        "line_id": "l2",
+        "order_id": "demo",
+        "product": "Cap",
+        "quantity": 1,
+        "unit_price": 3000,
+        "discount": 0,
+        "unit_cost": 1000
+      }
+    ],
+    "payments": [
+      {
+        "payment_id": "p1",
+        "order_id": "demo",
+        "occurred_at": "2026-01-01",
+        "kind": "capture",
+        "status": "succeeded",
+        "amount": 7000,
+        "fee": 140
+      },
+      {
+        "payment_id": "p2",
+        "order_id": "demo",
+        "occurred_at": "2026-01-01",
+        "kind": "capture",
+        "status": "succeeded",
+        "amount": 5000,
+        "fee": 100
+      }
+    ]
+  }
+}

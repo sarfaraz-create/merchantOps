@@ -1,0 +1,9 @@
+name: merchantops
+version: '1.0'
+config-version: 2
+profile: merchantops
+model-paths: [models]
+test-paths: [data_tests]
+models:
+  merchantops:
+    +materialized: table

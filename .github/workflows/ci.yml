@@ -1,0 +1,26 @@
+name: Validate MerchantOps
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python -m pytest -q
+      - run: python -m merchantops.build
+      - run: python -m merchantops.benchmark --orders 100000 --repeats 3
+      - run: python -m merchantops.publishing
+      - uses: actions/upload-artifact@v4
+        with:
+          name: verified-demo-and-results
+          path: |
+            dist/
+            docs/results.json
+            docs/benchmark.json
+            docs/source-manifest.json

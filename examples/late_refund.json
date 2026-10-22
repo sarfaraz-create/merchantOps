@@ -1,0 +1,13 @@
+{
+  "schema_version": 3,
+  "tables": {
+    "refunds": [
+      {
+        "refund_id": "r1",
+        "line_id": "l1",
+        "refunded_at": "2026-02-04",
+        "amount": 2000
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+merchantops:
+  target: local
+  outputs:
+    local:
+      type: duckdb
+      path: "{{ env_var('MERCHANTOPS_DB', 'merchantops-v3.duckdb') }}"
+      threads: 1

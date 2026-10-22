@@ -1,0 +1,953 @@
+{
+  "provenance": "Synthetic data, seed 42; no merchant results.",
+  "as_of": "2026-06-30",
+  "monthly": [
+    {
+      "month": "2026-01-01",
+      "channel": "Marketplace",
+      "orders": 102,
+      "gross": 35243800,
+      "discount": 3524380,
+      "refunds": 710730,
+      "cogs": 14802396,
+      "shipping": 969000,
+      "fees": 951532,
+      "ad_spend": 5270000,
+      "net_revenue": 31008690,
+      "contribution": 9015762
+    },
+    {
+      "month": "2026-01-01",
+      "channel": "Organic",
+      "orders": 106,
+      "gross": 31275700,
+      "discount": 3127570,
+      "refunds": 746685,
+      "cogs": 13135794,
+      "shipping": 1007000,
+      "fees": 844390,
+      "ad_spend": 0,
+      "net_revenue": 27401445,
+      "contribution": 12414261
+    },
+    {
+      "month": "2026-01-01",
+      "channel": "Paid social",
+      "orders": 102,
+      "gross": 32675200,
+      "discount": 3267520,
+      "refunds": 391320,
+      "cogs": 13723584,
+      "shipping": 969000,
+      "fees": 882180,
+      "ad_spend": 5270000,
+      "net_revenue": 29016360,
+      "contribution": 8171596
+    },
+    {
+      "month": "2026-02-01",
+      "channel": "Marketplace",
+      "orders": 113,
+      "gross": 34614400,
+      "discount": 3461440,
+      "refunds": 1299915,
+      "cogs": 14538048,
+      "shipping": 1073500,
+      "fees": 934536,
+      "ad_spend": 4760000,
+      "net_revenue": 29853045,
+      "contribution": 8546961
+    },
+    {
+      "month": "2026-02-01",
+      "channel": "Organic",
+      "orders": 108,
+      "gross": 34324200,
+      "discount": 3432420,
+      "refunds": 1021095,
+      "cogs": 14416164,
+      "shipping": 1026000,
+      "fees": 926700,
+      "ad_spend": 0,
+      "net_revenue": 29870685,
+      "contribution": 13501821
+    },
+    {
+      "month": "2026-02-01",
+      "channel": "Paid social",
+      "orders": 115,
+      "gross": 36852600,
+      "discount": 3685260,
+      "refunds": 463230,
+      "cogs": 15478092,
+      "shipping": 1092500,
+      "fees": 994960,
+      "ad_spend": 4760000,
+      "net_revenue": 32704110,
+      "contribution": 10378558
+    },
+    {
+      "month": "2026-03-01",
+      "channel": "Marketplace",
+      "orders": 139,
+      "gross": 43499600,
+      "discount": 4349960,
+      "refunds": 598230,
+      "cogs": 18269832,
+      "shipping": 1320500,
+      "fees": 1174420,
+      "ad_spend": 5270000,
+      "net_revenue": 38551410,
+      "contribution": 12516658
+    },
+    {
+      "month": "2026-03-01",
+      "channel": "Organic",
+      "orders": 164,
+      "gross": 52135800,
+      "discount": 5213580,
+      "refunds": 827640,
+      "cogs": 21897036,
+      "shipping": 1558000,
+      "fees": 1407585,
+      "ad_spend": 0,
+      "net_revenue": 46094580,
+      "contribution": 21231959
+    },
+    {
+      "month": "2026-03-01",
+      "channel": "Paid social",
+      "orders": 131,
+      "gross": 39131500,
+      "discount": 3913150,
+      "refunds": 1070505,
+      "cogs": 16435230,
+      "shipping": 1244500,
+      "fees": 1056486,
+      "ad_spend": 5270000,
+      "net_revenue": 34147845,
+      "contribution": 10141629
+    },
+    {
+      "month": "2026-04-01",
+      "channel": "Marketplace",
+      "orders": 168,
+      "gross": 53524500,
+      "discount": 13381125,
+      "refunds": 1821629,
+      "cogs": 22480290,
+      "shipping": 1596000,
+      "fees": 1204188,
+      "ad_spend": 11700000,
+      "net_revenue": 38321746,
+      "contribution": 1341268
+    },
+    {
+      "month": "2026-04-01",
+      "channel": "Organic",
+      "orders": 153,
+      "gross": 46149100,
+      "discount": 11537275,
+      "refunds": 1647041,
+      "cogs": 19382622,
+      "shipping": 1453500,
+      "fees": 1038246,
+      "ad_spend": 0,
+      "net_revenue": 32964784,
+      "contribution": 11090416
+    },
+    {
+      "month": "2026-04-01",
+      "channel": "Paid social",
+      "orders": 159,
+      "gross": 50846600,
+      "discount": 12711650,
+      "refunds": 1709205,
+      "cogs": 21355572,
+      "shipping": 1510500,
+      "fees": 1143939,
+      "ad_spend": 11700000,
+      "net_revenue": 36425745,
+      "contribution": 715734
+    },
+    {
+      "month": "2026-05-01",
+      "channel": "Marketplace",
+      "orders": 186,
+      "gross": 54924000,
+      "discount": 13731000,
+      "refunds": 1757876,
+      "cogs": 23068080,
+      "shipping": 1767000,
+      "fees": 1235655,
+      "ad_spend": 12090000,
+      "net_revenue": 39435124,
+      "contribution": 1274389
+    },
+    {
+      "month": "2026-05-01",
+      "channel": "Organic",
+      "orders": 190,
+      "gross": 59192100,
+      "discount": 14798025,
+      "refunds": 3167235,
+      "cogs": 24860682,
+      "shipping": 1805000,
+      "fees": 1331693,
+      "ad_spend": 0,
+      "net_revenue": 41226840,
+      "contribution": 13229465
+    },
+    {
+      "month": "2026-05-01",
+      "channel": "Paid social",
+      "orders": 182,
+      "gross": 57512700,
+      "discount": 14378175,
+      "refunds": 3223486,
+      "cogs": 24155334,
+      "shipping": 1729000,
+      "fees": 1293910,
+      "ad_spend": 12090000,
+      "net_revenue": 39911039,
+      "contribution": 642795
+    },
+    {
+      "month": "2026-06-01",
+      "channel": "Marketplace",
+      "orders": 210,
+      "gross": 64760200,
+      "discount": 16190050,
+      "refunds": 3354735,
+      "cogs": 27199284,
+      "shipping": 1995000,
+      "fees": 1456955,
+      "ad_spend": 11700000,
+      "net_revenue": 45215415,
+      "contribution": 2864176
+    },
+    {
+      "month": "2026-06-01",
+      "channel": "Organic",
+      "orders": 208,
+      "gross": 67798400,
+      "discount": 16949600,
+      "refunds": 3163368,
+      "cogs": 28475328,
+      "shipping": 1976000,
+      "fees": 1525319,
+      "ad_spend": 0,
+      "net_revenue": 47685432,
+      "contribution": 15708785
+    },
+    {
+      "month": "2026-06-01",
+      "channel": "Paid social",
+      "orders": 182,
+      "gross": 54744100,
+      "discount": 13686025,
+      "refunds": 2859884,
+      "cogs": 22992522,
+      "shipping": 1729000,
+      "fees": 1231617,
+      "ad_spend": 11700000,
+      "net_revenue": 38198191,
+      "contribution": 545052
+    }
+  ],
+  "retention": [
+    {
+      "cohort": "2026-01-01",
+      "eligible_customers": 274,
+      "repeat_customers": 81,
+      "retention_30d": 0.2956204379562044
+    },
+    {
+      "cohort": "2026-02-01",
+      "eligible_customers": 185,
+      "repeat_customers": 71,
+      "retention_30d": 0.3837837837837838
+    },
+    {
+      "cohort": "2026-03-01",
+      "eligible_customers": 162,
+      "repeat_customers": 67,
+      "retention_30d": 0.41358024691358025
+    },
+    {
+      "cohort": "2026-04-01",
+      "eligible_customers": 105,
+      "repeat_customers": 55,
+      "retention_30d": 0.5238095238095238
+    },
+    {
+      "cohort": "2026-05-01",
+      "eligible_customers": 57,
+      "repeat_customers": 33,
+      "retention_30d": 0.5789473684210527
+    }
+  ],
+  "products": [
+    {
+      "channel": "Marketplace",
+      "product": "Denim",
+      "orders": 392,
+      "units": 459,
+      "refunded_orders": 39,
+      "refund_amount": 4828264,
+      "charged_revenue": 103954860,
+      "net_revenue": 99126596,
+      "merchandise_contribution": 45167474,
+      "refunded_order_rate": 0.09948979591836735,
+      "refund_value_rate": 0.04644577463718387
+    },
+    {
+      "channel": "Marketplace",
+      "product": "Everyday tee",
+      "orders": 364,
+      "units": 433,
+      "refunded_orders": 31,
+      "refund_amount": 1714668,
+      "charged_revenue": 45244170,
+      "net_revenue": 43529502,
+      "merchandise_contribution": 19905888,
+      "refunded_order_rate": 0.08516483516483517,
+      "refund_value_rate": 0.03789809825221681
+    },
+    {
+      "channel": "Marketplace",
+      "product": "Overshirt",
+      "orders": 375,
+      "units": 443,
+      "refunded_orders": 33,
+      "refund_amount": 3000183,
+      "charged_revenue": 82729515,
+      "net_revenue": 79729332,
+      "merchandise_contribution": 36954138,
+      "refunded_order_rate": 0.088,
+      "refund_value_rate": 0.036264965411679256
+    },
+    {
+      "channel": "Organic",
+      "product": "Denim",
+      "orders": 382,
+      "units": 458,
+      "refunded_orders": 38,
+      "refund_amount": 4723302,
+      "charged_revenue": 103367070,
+      "net_revenue": 98643768,
+      "merchandise_contribution": 44802204,
+      "refunded_order_rate": 0.09947643979057591,
+      "refund_value_rate": 0.0456944556907727
+    },
+    {
+      "channel": "Organic",
+      "product": "Everyday tee",
+      "orders": 359,
+      "units": 417,
+      "refunded_orders": 39,
+      "refund_amount": 1987453,
+      "charged_revenue": 43685370,
+      "net_revenue": 41697917,
+      "merchandise_contribution": 18947231,
+      "refunded_order_rate": 0.10863509749303621,
+      "refund_value_rate": 0.045494704520071594
+    },
+    {
+      "channel": "Organic",
+      "product": "Overshirt",
+      "orders": 382,
+      "units": 472,
+      "refunded_orders": 39,
+      "refund_amount": 3862309,
+      "charged_revenue": 88764390,
+      "net_revenue": 84902081,
+      "merchandise_contribution": 39326705,
+      "refunded_order_rate": 0.10209424083769633,
+      "refund_value_rate": 0.04351191958847461
+    },
+    {
+      "channel": "Paid social",
+      "product": "Denim",
+      "orders": 354,
+      "units": 424,
+      "refunded_orders": 35,
+      "refund_amount": 4240473,
+      "charged_revenue": 96313590,
+      "net_revenue": 92073117,
+      "merchandise_contribution": 42228525,
+      "refunded_order_rate": 0.09887005649717515,
+      "refund_value_rate": 0.0440277742735994
+    },
+    {
+      "channel": "Paid social",
+      "product": "Everyday tee",
+      "orders": 357,
+      "units": 421,
+      "refunded_orders": 36,
+      "refund_amount": 2045913,
+      "charged_revenue": 44250435,
+      "net_revenue": 42204522,
+      "merchandise_contribution": 19235604,
+      "refunded_order_rate": 0.10084033613445378,
+      "refund_value_rate": 0.04623486752164131
+    },
+    {
+      "channel": "Paid social",
+      "product": "Overshirt",
+      "orders": 360,
+      "units": 428,
+      "refunded_orders": 37,
+      "refund_amount": 3431244,
+      "charged_revenue": 79556895,
+      "net_revenue": 76125651,
+      "merchandise_contribution": 34798827,
+      "refunded_order_rate": 0.10277777777777777,
+      "refund_value_rate": 0.043129435858450735
+    }
+  ],
+  "acquisition": [
+    {
+      "channel": "Marketplace",
+      "ad_spend": 50790000,
+      "net_revenue": 222385430,
+      "first_customers": 260,
+      "first_order_cac_paise": 195346.15384615384,
+      "blended_revenue_to_spend": 4.378527859814924
+    },
+    {
+      "channel": "Organic",
+      "ad_spend": 0,
+      "net_revenue": 225243766,
+      "first_customers": 301,
+      "first_order_cac_paise": 0.0,
+      "blended_revenue_to_spend": null
+    },
+    {
+      "channel": "Paid social",
+      "ad_spend": 50790000,
+      "net_revenue": 210403290,
+      "first_customers": 258,
+      "first_order_cac_paise": 196860.46511627908,
+      "blended_revenue_to_spend": 4.14261252215003
+    }
+  ],
+  "payments": [
+    {
+      "channel": "Marketplace",
+      "orders": 918,
+      "captured": 231928545,
+      "returned": 9199774,
+      "collection_gap": 0,
+      "refund_payable": 343341,
+      "failed_attempts": 65
+    },
+    {
+      "channel": "Organic",
+      "orders": 929,
+      "captured": 235816830,
+      "returned": 9172675,
+      "collection_gap": 0,
+      "refund_payable": 1400389,
+      "failed_attempts": 53
+    },
+    {
+      "channel": "Paid social",
+      "orders": 871,
+      "captured": 220120920,
+      "returned": 8941721,
+      "collection_gap": 0,
+      "refund_payable": 775909,
+      "failed_attempts": 42
+    }
+  ],
+  "payment_exceptions": [
+    {
+      "order_id": "O00003",
+      "channel": "Organic",
+      "charged": 323820,
+      "refund_granted": 103455,
+      "captured": 323820,
+      "returned": 0,
+      "collection_gap": 0,
+      "refund_payable": 103455,
+      "cash_net": 323820,
+      "failed_attempts": 0
+    },
+    {
+      "order_id": "O00138",
+      "channel": "Organic",
+      "charged": 413820,
+      "refund_granted": 103455,
+      "captured": 413820,
+      "returned": 0,
+      "collection_gap": 0,
+      "refund_payable": 103455,
+      "cash_net": 413820,
+      "failed_attempts": 0
+    },
+    {
+      "order_id": "O00287",
+      "channel": "Organic",
+      "charged": 206910,
+      "refund_granted": 103455,
+      "captured": 206910,
+      "returned": 0,
+      "collection_gap": 0,
+      "refund_payable": 103455,
+      "cash_net": 206910,
+      "failed_attempts": 0
+    },
+    {
+      "order_id": "O00453",
+      "channel": "Marketplace",
+      "charged": 458820,
+      "refund_granted": 103455,
+      "captured": 458820,
+      "returned": 0,
+      "collection_gap": 0,
+      "refund_payable": 103455,
+      "cash_net": 458820,
+      "failed_attempts": 0
+    },
+    {
+      "order_id": "O00648",
+      "channel": "Organic",
+      "charged": 458820,
+      "refund_granted": 103455,
+      "captured": 458820,
+      "returned": 0,
+      "collection_gap": 0,
+      "refund_payable": 103455,
+      "cash_net": 458820,
+      "failed_attempts": 0
+    },
+    {
+      "order_id": "O00873",
+      "channel": "Organic",
+      "charged": 413820,
+      "refund_granted": 103455,
+      "captured": 413820,
+      "returned": 0,
+      "collection_gap": 0,
+      "refund_payable": 103455,
+      "cash_net": 413820,
+      "failed_attempts": 0
+    },
+    {
+      "order_id": "O00980",
+      "channel": "Organic",
+      "charged": 251910,
+      "refund_granted": 125955,
+      "captured": 251910,
+      "returned": 0,
+      "collection_gap": 0,
+      "refund_payable": 125955,
+      "cash_net": 251910,
+      "failed_attempts": 0
+    },
+    {
+      "order_id": "O01113",
+      "channel": "Organic",
+      "charged": 194850,
+      "refund_granted": 48712,
+      "captured": 194850,
+      "returned": 0,
+      "collection_gap": 0,
+      "refund_payable": 48712,
+      "cash_net": 194850,
+      "failed_attempts": 0
+    },
+    {
+      "order_id": "O01200",
+      "channel": "Paid social",
+      "charged": 382350,
+      "refund_granted": 86212,
+      "captured": 382350,
+      "returned": 0,
+      "collection_gap": 0,
+      "refund_payable": 86212,
+      "cash_net": 382350,
+      "failed_attempts": 0
+    },
+    {
+      "order_id": "O01305",
+      "channel": "Marketplace",
+      "charged": 194850,
+      "refund_granted": 97424,
+      "captured": 194850,
+      "returned": 48712,
+      "collection_gap": 0,
+      "refund_payable": 48712,
+      "cash_net": 146138,
+      "failed_attempts": 0
+    }
+  ],
+  "sql": {
+    "order_economics": "{{ config(materialized='incremental',unique_key='order_id',incremental_strategy='delete+insert') }}\n-- Aggregate each child independently; joining line items to payments directly multiplies money.\nwith lines as (select order_id,sum(gross)::bigint as gross,sum(discount)::bigint as discount,\n sum(cogs)::bigint as cogs,sum(refunded)::bigint as refunded,sum(net_revenue)::bigint as net_revenue\n from {{ ref('line_economics') }} group by order_id),\n fees as (select order_id,sum(fee)::bigint as fees from {{ source('raw','payments') }} where status='succeeded' group by order_id)\nselect o.order_id,o.customer_id,o.ordered_at,o.channel,l.gross,l.discount,l.cogs,o.shipping,\n coalesce(f.fees,0)::bigint as fees,l.refunded,l.net_revenue,\n (l.net_revenue-l.cogs-o.shipping-coalesce(f.fees,0))::bigint as contribution_before_ads\nfrom {{ source('raw','orders') }} o join lines l using(order_id) left join fees f using(order_id)\n{% if is_incremental() %}where o.order_id in ({{ changed_orders() }}){% endif %}\n",
+    "channel_acquisition": "-- First observed order; deterministic same-day tie break by order_id.\nwith ranked as (\n select *,row_number() over(partition by customer_id order by ordered_at,order_id) as rn from {{ source('raw','orders') }}\n), acquired as (\n select channel,count(*) as first_customers from ranked where rn=1 group by channel\n), economics as (\n select channel,sum(ad_spend)::bigint as ad_spend,sum(net_revenue)::bigint as net_revenue\n from {{ ref('monthly') }} group by channel\n)\nselect e.*,coalesce(a.first_customers,0)::bigint as first_customers,\n e.ad_spend*1.0/nullif(a.first_customers,0) as first_order_cac_paise,\n e.net_revenue*1.0/nullif(e.ad_spend,0) as blended_revenue_to_spend\nfrom economics e left join acquired a using(channel)\n",
+    "line_economics": "{{ config(materialized='incremental',unique_key='line_id',incremental_strategy='delete+insert') }}\nwith refunds as (select line_id,sum(amount)::bigint as refunded from {{ source('raw','refunds') }} group by line_id)\nselect l.line_id,l.order_id,o.customer_id,o.ordered_at,o.channel,l.product,l.quantity,\n (l.quantity*l.unit_price)::bigint as gross,l.discount,(l.quantity*l.unit_cost)::bigint as cogs,\n coalesce(r.refunded,0)::bigint as refunded,\n (l.quantity*l.unit_price-l.discount-coalesce(r.refunded,0))::bigint as net_revenue,\n (l.quantity*(l.unit_price-l.unit_cost)-l.discount-coalesce(r.refunded,0))::bigint as merchandise_contribution\nfrom {{ source('raw','line_items') }} l join {{ source('raw','orders') }} o using(order_id)\nleft join refunds r using(line_id)\n{% if is_incremental() %}where l.order_id in ({{ changed_orders() }}){% endif %}\n",
+    "payment_reconciliation": "{{ config(materialized='incremental',unique_key='order_id',incremental_strategy='delete+insert') }}\nwith cash as (select order_id,\n sum(case when kind='capture' and status='succeeded' then amount else 0 end)::bigint as captured,\n sum(case when kind='refund' and status='succeeded' then amount else 0 end)::bigint as returned,\n count(*) filter(where status='failed')::bigint as failed_attempts\n from {{ source('raw','payments') }} group by order_id)\nselect o.order_id,o.channel,(o.gross-o.discount)::bigint as charged,o.refunded as refund_granted,\n coalesce(captured,0)::bigint as captured,coalesce(returned,0)::bigint as returned,\n (o.gross-o.discount-coalesce(captured,0))::bigint as collection_gap,\n (o.refunded-coalesce(returned,0))::bigint as refund_payable,\n (coalesce(captured,0)-coalesce(returned,0))::bigint as cash_net,\n coalesce(failed_attempts,0)::bigint as failed_attempts\nfrom {{ ref('order_economics') }} o left join cash using(order_id)\n{% if is_incremental() %}where o.order_id in ({{ changed_orders() }}){% endif %}\n",
+    "monthly": "{{ config(materialized='incremental',unique_key=['month','channel'],incremental_strategy='delete+insert') }}\n-- Revenue follows order date; refund grants and actual payment fees follow their event dates.\nwith ledger as (\n select date_trunc('month',ordered_at)::date as month,channel,gross,discount,0::bigint as refunds,cogs,shipping,0::bigint as fees,0::bigint as ad_spend,1 as orders from {{ ref('order_economics') }}\n union all select date_trunc('month',r.refunded_at)::date,o.channel,0,0,r.amount,0,0,0,0,0\n from {{ source('raw','refunds') }} r join {{ source('raw','line_items') }} l using(line_id) join {{ source('raw','orders') }} o using(order_id)\n union all select date_trunc('month',p.occurred_at)::date,o.channel,0,0,0,0,0,p.fee,0,0 from {{ source('raw','payments') }} p join {{ source('raw','orders') }} o using(order_id) where p.status='succeeded'\n union all select date_trunc('month',spent_at)::date,channel,0,0,0,0,0,0,amount,0 from {{ source('raw','spend') }}\n), affected as (\n select date_trunc('month',ordered_at)::date as month,channel from {{ source('raw','orders') }} where order_id in ({{ changed_orders() }})\n union select date_trunc('month',r.refunded_at)::date,o.channel from {{ source('raw','refunds') }} r join {{ source('raw','line_items') }} l using(line_id) join {{ source('raw','orders') }} o using(order_id) where r._batch_id>{{ var('lower_batch',0) }}\n union select date_trunc('month',p.occurred_at)::date,o.channel from {{ source('raw','payments') }} p join {{ source('raw','orders') }} o using(order_id) where p._batch_id>{{ var('lower_batch',0) }}\n union select date_trunc('month',spent_at)::date,channel from {{ source('raw','spend') }} where _batch_id>{{ var('lower_batch',0) }}\n)\nselect month,channel,sum(orders)::bigint as orders,sum(gross)::bigint as gross,sum(discount)::bigint as discount,\n sum(refunds)::bigint as refunds,sum(cogs)::bigint as cogs,sum(shipping)::bigint as shipping,sum(fees)::bigint as fees,\n sum(ad_spend)::bigint as ad_spend,sum(gross-discount-refunds)::bigint as net_revenue,\n sum(gross-discount-refunds-cogs-shipping-fees-ad_spend)::bigint as contribution\nfrom ledger\n{% if is_incremental() %}where (month,channel) in (select month,channel from affected){% endif %}\ngroup by all\n",
+    "sku_returns": "{{ config(materialized='incremental',unique_key=['channel','product'],incremental_strategy='delete+insert') }}\nselect channel,product,count(distinct order_id)::bigint as orders,sum(quantity)::bigint as units,\n count(distinct order_id) filter(where refunded>0)::bigint as refunded_orders,\n sum(refunded)::bigint as refund_amount,sum(gross-discount)::bigint as charged_revenue,\n sum(net_revenue)::bigint as net_revenue,sum(merchandise_contribution)::bigint as merchandise_contribution,\n count(distinct order_id) filter(where refunded>0)*1.0/count(distinct order_id) as refunded_order_rate,\n sum(refunded)*1.0/nullif(sum(gross-discount),0) as refund_value_rate\nfrom {{ ref('line_economics') }}\n{% if is_incremental() %}where (channel,product) in (select channel,product from {{ ref('line_economics') }} where order_id in ({{ changed_orders() }})){% endif %}\ngroup by all\n",
+    "retention": "-- 30-day repurchase, exclusive first date and inclusive day 30; immature users excluded.\nwith first_order as (\n select customer_id,min(ordered_at) as acquired from {{ source('raw','orders') }} group by customer_id\n), customers as (\n select f.customer_id,f.acquired,\n max(case when o.ordered_at>acquired and o.ordered_at<=acquired+30 then 1 else 0 end) as repeated\n from first_order f join {{ source('raw','orders') }} o using(customer_id)\n where acquired<=date '{{ var(\"as_of\", \"2026-06-30\") }}'-30\n and o.ordered_at<=date '{{ var(\"as_of\", \"2026-06-30\") }}'\n group by all\n)\nselect date_trunc('month',acquired)::date as cohort,count(*) as eligible_customers,\n sum(repeated)::bigint as repeat_customers, sum(repeated)*1.0/count(*) as retention_30d\nfrom customers group by all\n"
+  },
+  "memo": [
+    {
+      "title": "1. Audit discount policy before chasing more volume",
+      "evidence": "January-to-June discounts increased by \u20b9369,062.05. Contribution changed by \u20b9-104,836.06. Review promotion eligibility and contribution per order.",
+      "limitation": "An accounting decomposition cannot establish that discounts caused the change. Product mix and order volume also changed."
+    },
+    {
+      "title": "2. Investigate Denim refund reasons",
+      "evidence": "Denim has the highest store-wide refund-value rate: 4.54% (\u20b9137,920.39 / \u20b93,036,355.20 charged); 112/1128 orders received a refund. Check return reasons and product expectations.",
+      "limitation": "Order-date view includes all loaded refunds. No reason codes or recovered inventory costs exist; recent orders are less mature. This does not prove a quality problem."
+    },
+    {
+      "title": "3. Review acquisition cohorts before changing ad budgets",
+      "evidence": "Paid social spent \u20b9507,900.00 across 258 first-observed customers: CAC \u20b91,968.60. Blended net revenue/spend is 4.14\u00d7 and includes repeat purchases.",
+      "limitation": "First order in the observed period is not proven lifetime acquisition. Attribution is recorded channel; no causal lift or lifetime-value estimate is available."
+    }
+  ],
+  "replay": {
+    "kind": "Actual DuckDB + dbt executions recorded at build time; browser is read-only",
+    "command": "python -m merchantops.build",
+    "stages": [
+      {
+        "name": "Two lines, split payment",
+        "monthly": [
+          {
+            "month": "2026-01-01",
+            "contribution": 7260
+          }
+        ],
+        "orders": 1,
+        "line_items": 2,
+        "payments": 2,
+        "refunds": 0,
+        "quarantined_batches": 0,
+        "reconciliation": {
+          "order_id": "demo",
+          "channel": "Paid social",
+          "charged": 12000,
+          "refund_granted": 0,
+          "captured": 12000,
+          "returned": 0,
+          "collection_gap": 0,
+          "refund_payable": 0,
+          "cash_net": 12000,
+          "failed_attempts": 0
+        },
+        "ingestion": {
+          "batch_id": 1,
+          "inserted_rows": 5
+        },
+        "watermark": [
+          0,
+          1
+        ]
+      },
+      {
+        "name": "Late partial line refund",
+        "monthly": [
+          {
+            "month": "2026-01-01",
+            "contribution": 7260
+          },
+          {
+            "month": "2026-02-01",
+            "contribution": -2000
+          }
+        ],
+        "orders": 1,
+        "line_items": 2,
+        "payments": 2,
+        "refunds": 1,
+        "quarantined_batches": 0,
+        "reconciliation": {
+          "order_id": "demo",
+          "channel": "Paid social",
+          "charged": 12000,
+          "refund_granted": 2000,
+          "captured": 12000,
+          "returned": 0,
+          "collection_gap": 0,
+          "refund_payable": 2000,
+          "cash_net": 12000,
+          "failed_attempts": 0
+        },
+        "ingestion": {
+          "batch_id": 2,
+          "inserted_rows": 1
+        },
+        "watermark": [
+          1,
+          2
+        ]
+      },
+      {
+        "name": "Identical replay",
+        "monthly": [
+          {
+            "month": "2026-01-01",
+            "contribution": 7260
+          },
+          {
+            "month": "2026-02-01",
+            "contribution": -2000
+          }
+        ],
+        "orders": 1,
+        "line_items": 2,
+        "payments": 2,
+        "refunds": 1,
+        "quarantined_batches": 0,
+        "reconciliation": {
+          "order_id": "demo",
+          "channel": "Paid social",
+          "charged": 12000,
+          "refund_granted": 2000,
+          "captured": 12000,
+          "returned": 0,
+          "collection_gap": 0,
+          "refund_payable": 2000,
+          "cash_net": 12000,
+          "failed_attempts": 0
+        },
+        "ingestion": {
+          "batch_id": 2,
+          "inserted_rows": 0
+        },
+        "watermark": [
+          2,
+          2
+        ]
+      },
+      {
+        "name": "Refund cash returned + campaign cost",
+        "monthly": [
+          {
+            "month": "2026-01-01",
+            "contribution": 7260
+          },
+          {
+            "month": "2026-02-01",
+            "contribution": -3000
+          }
+        ],
+        "orders": 1,
+        "line_items": 2,
+        "payments": 3,
+        "refunds": 1,
+        "quarantined_batches": 0,
+        "reconciliation": {
+          "order_id": "demo",
+          "channel": "Paid social",
+          "charged": 12000,
+          "refund_granted": 2000,
+          "captured": 12000,
+          "returned": 2000,
+          "collection_gap": 0,
+          "refund_payable": 0,
+          "cash_net": 10000,
+          "failed_attempts": 0
+        },
+        "ingestion": {
+          "batch_id": 3,
+          "inserted_rows": 2
+        },
+        "watermark": [
+          2,
+          3
+        ]
+      },
+      {
+        "name": "Invalid line reference quarantined",
+        "monthly": [
+          {
+            "month": "2026-01-01",
+            "contribution": 7260
+          },
+          {
+            "month": "2026-02-01",
+            "contribution": -3000
+          }
+        ],
+        "orders": 1,
+        "line_items": 2,
+        "payments": 3,
+        "refunds": 1,
+        "quarantined_batches": 1,
+        "reconciliation": {
+          "order_id": "demo",
+          "channel": "Paid social",
+          "charged": 12000,
+          "refund_granted": 2000,
+          "captured": 12000,
+          "returned": 2000,
+          "collection_gap": 0,
+          "refund_payable": 0,
+          "cash_net": 10000,
+          "failed_attempts": 0
+        },
+        "ingestion": {
+          "rejected": "Orphan refund"
+        },
+        "watermark": [
+          3,
+          3
+        ],
+        "rejection": {
+          "reason": "Orphan refund"
+        }
+      }
+    ]
+  },
+  "measurement": {
+    "rows": {
+      "orders": 2718,
+      "line_items": 3624,
+      "refunds": 328,
+      "payments": 3569,
+      "spend": 543
+    },
+    "build_seconds": 15.835,
+    "python": "3.13.2",
+    "source_sha256": "7753c3737584ae30f28547664c12657bb3a293cba5b6e42682992644c1752324",
+    "generated_at_utc": "2026-10-22T22:21:22.533601+00:00",
+    "dbt": {
+      "lower_batch": 0,
+      "upper_batch": 1,
+      "full_refresh": true,
+      "seconds": 2.4549260420026258,
+      "results": [
+        {
+          "node": "model.merchantops.line_economics",
+          "status": "success",
+          "seconds": 0.05331087112426758,
+          "rows_affected": null
+        },
+        {
+          "node": "model.merchantops.retention",
+          "status": "success",
+          "seconds": 0.0295870304107666,
+          "rows_affected": null
+        },
+        {
+          "node": "test.merchantops.not_null_line_economics_line_id.54f10bd508",
+          "status": "pass",
+          "seconds": 0.025328874588012695,
+          "rows_affected": null
+        },
+        {
+          "node": "test.merchantops.unique_line_economics_line_id.9bf90a6ef8",
+          "status": "pass",
+          "seconds": 0.014043807983398438,
+          "rows_affected": null
+        },
+        {
+          "node": "test.merchantops.not_null_retention_cohort.cb4853a2cd",
+          "status": "pass",
+          "seconds": 0.011483907699584961,
+          "rows_affected": null
+        },
+        {
+          "node": "test.merchantops.retention_bounds",
+          "status": "pass",
+          "seconds": 0.010787010192871094,
+          "rows_affected": null
+        },
+        {
+          "node": "test.merchantops.unique_retention_cohort.4bd059e26f",
+          "status": "pass",
+          "seconds": 0.011158943176269531,
+          "rows_affected": null
+        },
+        {
+          "node": "model.merchantops.order_economics",
+          "status": "success",
+          "seconds": 0.016656875610351562,
+          "rows_affected": null
+        },
+        {
+          "node": "model.merchantops.sku_returns",
+          "status": "success",
+          "seconds": 0.015879154205322266,
+          "rows_affected": null
+        },
+        {
+          "node": "test.merchantops.not_null_order_economics_order_id.a6992ff4d5",
+          "status": "pass",
+          "seconds": 0.01330113410949707,
+          "rows_affected": null
+        },
+        {
+          "node": "test.merchantops.unique_order_economics_order_id.b277254880",
+          "status": "pass",
+          "seconds": 0.011932849884033203,
+          "rows_affected": null
+        },
+        {
+          "node": "model.merchantops.monthly",
+          "status": "success",
+          "seconds": 0.01887798309326172,
+          "rows_affected": null
+        },
+        {
+          "node": "model.merchantops.payment_reconciliation",
+          "status": "success",
+          "seconds": 0.016561031341552734,
+          "rows_affected": null
+        },
+        {
+          "node": "test.merchantops.not_null_monthly_channel.2637434402",
+          "status": "pass",
+          "seconds": 0.012032032012939453,
+          "rows_affected": null
+        },
+        {
+          "node": "test.merchantops.not_null_monthly_month.552cd99e34",
+          "status": "pass",
+          "seconds": 0.011325836181640625,
+          "rows_affected": null
+        },
+        {
+          "node": "test.merchantops.reconcile",
+          "status": "pass",
+          "seconds": 0.011729001998901367,
+          "rows_affected": null
+        },
+        {
+          "node": "test.merchantops.not_null_payment_reconciliation_order_id.d881e9e3aa",
+          "status": "pass",
+          "seconds": 0.011671066284179688,
+          "rows_affected": null
+        },
+        {
+          "node": "test.merchantops.payment_balance",
+          "status": "pass",
+          "seconds": 0.010754108428955078,
+          "rows_affected": null
+        },
+        {
+          "node": "test.merchantops.unique_payment_reconciliation_order_id.5a19427155",
+          "status": "pass",
+          "seconds": 0.011613845825195312,
+          "rows_affected": null
+        },
+        {
+          "node": "model.merchantops.channel_acquisition",
+          "status": "success",
+          "seconds": 0.022078990936279297,
+          "rows_affected": null
+        },
+        {
+          "node": "test.merchantops.sku_reconcile",
+          "status": "pass",
+          "seconds": 0.01277017593383789,
+          "rows_affected": null
+        }
+      ]
+    }
+  }
+}

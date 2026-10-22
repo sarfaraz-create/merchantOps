@@ -1,0 +1,19 @@
+{
+  "dataset": "Synthetic store v3",
+  "seed": 42,
+  "period": [
+    "2026-01-01",
+    "2026-06-30"
+  ],
+  "tables": {
+    "orders": 2718,
+    "line_items": 3624,
+    "refunds": 328,
+    "payments": 3569,
+    "spend": 543
+  },
+  "source_sha256": "7753c3737584ae30f28547664c12657bb3a293cba5b6e42682992644c1752324",
+  "currency": "INR",
+  "monetary_unit": "paise",
+  "source": "merchantops.core.synthetic"
+}

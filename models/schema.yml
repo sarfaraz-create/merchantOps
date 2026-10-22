@@ -1,0 +1,25 @@
+version: 2
+models:
+  - name: order_economics
+    description: Order-date economics including all loaded refunds; never sum with monthly ledger.
+    columns:
+      - name: order_id
+        data_tests: [unique, not_null]
+  - name: monthly
+    columns:
+      - name: month
+        data_tests: [not_null]
+      - name: channel
+        data_tests: [not_null]
+  - name: retention
+    columns:
+      - name: cohort
+        data_tests: [unique, not_null]
+  - name: line_economics
+    columns:
+      - name: line_id
+        data_tests: [unique, not_null]
+  - name: payment_reconciliation
+    columns:
+      - name: order_id
+        data_tests: [unique, not_null]

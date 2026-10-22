@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.duckdb*
+target/
+logs/
+.user.yml
+
+*.duckdb.lock
+store-exports/
+store-reports/

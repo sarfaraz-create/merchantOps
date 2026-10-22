@@ -1,0 +1,24 @@
+{
+  "schema_version": 3,
+  "tables": {
+    "payments": [
+      {
+        "payment_id": "p3",
+        "order_id": "demo",
+        "occurred_at": "2026-02-05",
+        "kind": "refund",
+        "status": "succeeded",
+        "amount": 2000,
+        "fee": 0
+      }
+    ],
+    "spend": [
+      {
+        "spend_id": "ad",
+        "spent_at": "2026-02-05",
+        "channel": "Paid social",
+        "amount": 1000
+      }
+    ]
+  }
+}
