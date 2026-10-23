@@ -1,5 +1,5 @@
-name: Validate MerchantOps
-on: [push, pull_request]
+name: Validate and publish MerchantOps
+on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read
 jobs:
@@ -24,3 +24,24 @@ jobs:
             docs/results.json
             docs/benchmark.json
             docs/source-manifest.json
+      - uses: actions/upload-pages-artifact@v4
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        with:
+          path: dist
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy verified demo
+        id: deployment
+        uses: actions/deploy-pages@v4
